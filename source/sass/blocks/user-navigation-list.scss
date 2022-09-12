@@ -1,0 +1,14 @@
+.user-navigation-list {
+  position: absolute;
+  top: 2px;
+  right: 60px;
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.user-navigation-list__item {
+  text-align: center;
+  width: 60px;
+}

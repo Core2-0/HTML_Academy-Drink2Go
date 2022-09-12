@@ -7,6 +7,7 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   margin: 0;
+  min-width: $mobile-width;
   font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $font-line-height-base;

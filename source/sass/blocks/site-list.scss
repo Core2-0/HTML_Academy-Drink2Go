@@ -1,0 +1,25 @@
+.site-list {
+  @include list-reset;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.site-list__item {
+  margin-left: calc(var(--content-padding-mobile) * -1);
+  margin-right: calc(var(--content-padding-mobile) * -1);
+  border-top: 1px solid $base_secondary;
+
+  &:last-child {
+    border-bottom: 1px solid $base_secondary;
+  }
+}
+
+.site-list__link {
+  display: block;
+  color: $base_black;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  padding: 20px 0;
+  text-decoration: none;
+}
