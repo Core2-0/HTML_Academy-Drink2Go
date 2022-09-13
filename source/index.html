@@ -150,7 +150,7 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков - «Drink2Go»</h1>
     <section class="features wrapper">
       <h2 class="features__title title">Главные причины выбрать Drink2Go</h2>
-      <span class="features__badge badge">Преимущества</span>
+      <h4 class="features__badge badge">Преимущества</h4>
       <dl class="features__features-list features-list">
         <div class="features-list__item features-list__item--speed">
           <dt class="features-list__title title">Скорость</dt>
@@ -172,7 +172,7 @@
     </section>
     <section class="catalog">
       <h2 class="catalog__title title">Каталог кофейных напитков</h2>
-      <span class="catalog__badge badge">Каталог</span>
+      <h4 class="catalog__badge badge">Каталог</h4>
       <section class="catalog__filter wrapper">
         <h3 class="visually-hidden">Фильтр товаров</h3>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
@@ -258,17 +258,41 @@
       </section>
       <section class="catalog__products">
         <h3 class="visually-hidden">Список товаров</h3>
-        <div class="sort">
-          <label>
-            Сортировка:
-            <select name="" id="">
-              <option value="default">По умолчанию</option>
-              <option value="high">Сначала дорогие</option>
-              <option value="low">Сначала дешевые</option>
-              <option value="high-rating">Высокий рейтинг</option>
-            </select>
-          </label>
-        </div>
+        <!-- <form class="catalog__sort sort">
+          <label class="sort__label" for="">Сортировка:</label>
+          <select class="sort__select" name="" id="">
+            <option class="sort__option" value="">По умолчанию</option>
+            <option class="sort__option" value="">Сначала дорогие</option>
+            <option class="sort__option" value="">Сначала дешевые</option>
+            <option class="sort__option" value="">Высокий рейтинг</option>
+          </select>
+        </form> -->
+        <form class="" action="">
+          <fieldset class="sort">
+            <legend class="sort__title">Сортировка:</legend>
+            <div class="sort__active" data-default="sort-default">По умолчанию</div>
+            <ul class="sort__content-list">
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-default" type="radio" value="default" name="select-sort"
+                  checked />
+                <label class="sort__label" for="sort-default">По умолчанию</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-high" type="radio" value="high" name="select-sort" />
+                <label class="sort__label" for="sort-high">Сначала дорогие</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-low" type="radio" value="low" name="select-sort" />
+                <label class="sort__label" for="sort-low">Сначала дешевые</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-high-rating" type="radio" value="high-rating"
+                  name="select-sort" />
+                <label class="sort__label" for="sort-high-rating">Высокий рейтинг</label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
         <ul>
           <li>
             <article>
@@ -461,9 +485,10 @@
         </li>
       </ul>
     </section>
+    <a href="https://htmlacademy.ru/intensive/adaptive">Разработано в</a>
   </footer>
 
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>
