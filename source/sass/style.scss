@@ -8,6 +8,7 @@
 
 // Mixins
 @import "./mixins/list-reset.scss";
+@import "./mixins/fieldset-reset.scss";
 
 // Blocks
 @import "./blocks/title.scss";
@@ -25,3 +26,8 @@
 // Features
 @import "./blocks/features.scss";
 @import "./blocks/features-list.scss";
+//Catalog
+@import "./blocks/catalog.scss";
+// Filter
+@import "./blocks/filter.scss";
+@import "./blocks/range-filter.scss";

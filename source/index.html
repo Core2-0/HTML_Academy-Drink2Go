@@ -12,7 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Pixel Glass -->
-  <!-- <style>
+  <style>
   HTML {
     background-repeat: no-repeat;
     background-position:  50% 0;
@@ -36,7 +36,7 @@
   BODY {
     opacity: .5;
   }
-</style> -->
+</style>
   <!-- Pixel Glass -->
 </head>
 
@@ -167,17 +167,32 @@
         </div>
       </dl>
     </section>
-    <section class="catalog">
-      <h2>Каталог кофейных напитков</h2>
-      <section>
+    <section class="catalog wrapper">
+      <h2 class="catalog__title title">Каталог кофейных напитков</h2>
+      <span class="catalog__badge badge">Каталог</span>
+      <section class="catalog__filter">
         <h3 class="visually-hidden">Фильтр товаров</h3>
-        <form action="" method="get">
-          <fieldset>
-            <legend>Цена</legend>
-            <div></div>
+        <form class="filter" action="" method="get">
+          <fieldset class="filter__fieldset">
+            <legend class="filter__title title">Цена</legend>
+            <div class="filter__range-filter range-filter">
+              <div class="range-filter__controls">
+                <div class="range-filter__scale">
+                  <div class="range-filter__bar" style="width: 84%; margin-left: 0%;"></div>
+                </div>
+                <div class="range-filter__toggle range-filter__toggle--min" tabindex="0" style="left: 0%;"></div>
+                <div class="range-filter__toggle range-filter__toggle--max" tabindex="0" style="left: 84%;"></div>
+              </div>
+              <div class="range-filter__price-wrapper">
+                <label class="visually-hidden" for="price-min">от</label>
+                <input class="range-filter__price  range-filter__price--min-price" id="price-min" type="number" name="min-price" placeholder="0">
+                <label class="visually-hidden" for="price-max">до</label>
+                <input class="range-filter__price range-filter__price--max-price" id="price-max" type="number" name="max-price" value="900">
+              </div>
+            </div>
           </fieldset>
-          <fieldset>
-            <legend>Наличие молока</legend>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__title title">Наличие молока</legend>
             <ul>
               <li>
                 <label>
@@ -205,8 +220,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Страна произрастания</legend>
+          <fieldset class="filter__fieldset">
+            <legend class="filter__title title">Страна произрастания</legend>
             <ul>
               <li>
                 <label>
@@ -244,7 +259,7 @@
           <button class="button" type="reset">Сбросить фильтр</button>
         </form>
       </section>
-      <section>
+      <section class="catalog__products">
         <h3 class="visually-hidden">Список товаров</h3>
         <div class="sort">
           <label>
