@@ -15,3 +15,66 @@
   text-align: center;
   max-width: 280px;
 }
+
+.filter__radio-list {
+  @include list-reset;
+  display: grid;
+  row-gap: 13px;
+}
+
+// .filter__radio-item {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   position: relative;
+// }
+
+.filter__label {
+  position: relative;
+  display: flex;
+  margin-right: 12px;
+  font-size: 16px;
+  padding-left: 46px;
+  align-items: center;
+}
+
+.filter__radio-label {
+  --radio-outer-diameter: 24px;
+  --radio-inner-diameter: 15px;
+
+  min-height: var(--radio-outer-diameter);
+  width: 100%;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: "";
+    box-sizing: border-box;
+    left: 0;
+    width: var(--radio-outer-diameter);
+    height: var(--radio-outer-diameter);
+    border: 1px solid $base_primary;
+    background-color: transparent;
+  }
+
+  &::after {
+    left: calc((var(--radio-outer-diameter) - var(--radio-inner-diameter)) / 2);
+    width: var(--radio-inner-diameter);
+    height: var(--radio-inner-diameter);
+    background-color: $base_primary;
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid $base_primary;
+    }
+  }
+}

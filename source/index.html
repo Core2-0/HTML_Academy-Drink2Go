@@ -12,7 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
   HTML {
     background-repeat: no-repeat;
     background-position:  50% 0;
@@ -36,7 +36,7 @@
   BODY {
     opacity: .5;
   }
-</style>
+</style> -->
   <!-- Pixel Glass -->
 </head>
 
@@ -193,12 +193,10 @@
           </fieldset>
           <fieldset class="filter__fieldset">
             <legend class="filter__title title">Наличие молока</legend>
-            <ul>
-              <li>
-                <label>
-                  Неважно
-                  <input type="radio" checked>
-                </label>
+            <ul class="filter__radio-list">
+              <li class="filter__radio-item">
+                <input class="visually-hidden" type="radio" id="" name="" value="" checked>
+                <label class="filter__label filter__radio-label" for="">Неважно</label>
               </li>
               <li>
                 <label>
