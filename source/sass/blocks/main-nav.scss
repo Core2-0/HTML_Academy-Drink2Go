@@ -53,3 +53,9 @@
     box-shadow: none;
   }
 }
+
+.main-nav__site-list {
+  &--closed {
+    display: none;
+  }
+}

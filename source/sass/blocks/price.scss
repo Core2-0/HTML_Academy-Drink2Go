@@ -1,0 +1,14 @@
+.price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: $base_black;
+
+  &--old-price {
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: line-through;
+    color: $base_primary;
+    margin-right: 1px;
+  }
+}
