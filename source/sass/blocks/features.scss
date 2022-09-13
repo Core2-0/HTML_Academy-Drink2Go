@@ -1,0 +1,21 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 48px;
+}
+
+.features__title {
+  margin: 0;
+  order: 1;
+  margin-bottom: 36px;
+}
+
+.features__badge {
+  order: 0;
+  margin-bottom: 5px;
+}
+
+.features__features-list {
+  order: 2;
+}
