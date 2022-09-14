@@ -1,6 +1,6 @@
 .filter__fieldset {
   @include fieldset-reset;
-  padding-bottom: 22px;
+  padding-bottom: 23px;
 }
 
 .filter__title {
@@ -16,34 +16,34 @@
   max-width: 280px;
 }
 
-.filter__radio-list {
+.filter__input-list {
   @include list-reset;
   display: grid;
-  row-gap: 13px;
-}
 
-// .filter__radio-item {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   position: relative;
-// }
+  &--radio {
+    row-gap: 22px;
+  }
+
+  &--checkbox {
+    row-gap: 20px;
+    margin-top: -2px;
+    margin-bottom: 11px;
+  }
+}
 
 .filter__label {
   position: relative;
   display: flex;
-  margin-right: 12px;
   font-size: 16px;
-  padding-left: 46px;
   align-items: center;
 }
 
 .filter__radio-label {
   --radio-outer-diameter: 24px;
-  --radio-inner-diameter: 15px;
+  --radio-inner-diameter: 14px;
 
+  padding-left: 34px;
   min-height: var(--radio-outer-diameter);
-  width: 100%;
   cursor: pointer;
 
   &::before,
@@ -56,7 +56,6 @@
   }
 
   &::before {
-    content: "";
     box-sizing: border-box;
     left: 0;
     width: var(--radio-outer-diameter);
@@ -65,16 +64,127 @@
     background-color: transparent;
   }
 
-  &::after {
-    left: calc((var(--radio-outer-diameter) - var(--radio-inner-diameter)) / 2);
-    width: var(--radio-inner-diameter);
-    height: var(--radio-inner-diameter);
-    background-color: $base_primary;
-  }
-
   &:hover {
     &::before {
       border: 1px solid $base_primary;
     }
+  }
+}
+
+.filter__radio-item input[type="radio"]:checked + .filter__radio-label::after {
+  left: calc((var(--radio-outer-diameter) - var(--radio-inner-diameter)) / 2);
+  width: var(--radio-inner-diameter);
+  height: var(--radio-inner-diameter);
+  background-color: $base_primary;
+}
+
+.filter__radio-item input[type="radio"]:disabled + .filter__radio-label {
+  color: $base_grey;
+
+  &::before {
+    border-color: $light_grey;
+  }
+}
+
+.filter__radio-item input[type="radio"]:disabled:checked + .filter__radio-label {
+  &::after {
+    background-color: $light_grey;
+  }
+}
+
+.filter__checkbox-label {
+  --checkbox-outer-width: 42px;
+  --checkbox-outer-height: 24px;
+  --checkbox-togle-diameter: 20px;
+
+  padding-left: 54px;
+  min-height: var(--checkbox-outer-height);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    box-sizing: border-box;
+    left: 0;
+    width: var(--checkbox-outer-width);
+    height: var(--checkbox-outer-height);
+    background-color: $base_grey;
+    border-radius: 12px;
+    transition: .2s;
+  }
+
+  &::after {
+    left: calc((var(--checkbox-outer-width) - var(--checkbox-togle-diameter)) / 8);
+    width: var(--checkbox-togle-diameter);
+    height: var(--checkbox-togle-diameter);
+    background-color: $base_white;
+    border-radius: 50%;
+    transition: .2s;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: rgba($base_primary, $alpha: 0.25);
+      border: 1px solid $base_primary;
+      transition: none;
+    }
+  }
+}
+
+.filter__checkbox-item input[type="checkbox"]:checked + .filter__checkbox-label::after {
+  left: calc((var(--checkbox-outer-width) - var(--checkbox-togle-diameter)) / 1.1);
+}
+
+.filter__checkbox-item input[type="checkbox"]:checked + .filter__checkbox-label::before {
+  background-color: $base_primary;
+}
+
+.filter__checkbox-item input[type="checkbox"]:disabled + .filter__checkbox-label {
+  color: $base_grey;
+  cursor: default;
+
+  &::before
+  {
+    background-color: $light_grey;
+  }
+
+  &::after {
+    background-color: $lightest_grey;
+  }
+
+  &::before,
+  &::after {
+    border: none;
+  }
+}
+
+.filter__checkbox-item input[type="checkbox"]:disabled:checked + .filter__checkbox-label {
+  &::after {
+    background-color: $base_grey;
+  }
+}
+
+.filter__submit-list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter__button {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 24px;
+  padding: 10px 14px;
+
+  &--reset {
+    margin-bottom: 0;
+    background-color: $base_white;
+    color: $base_primary;
   }
 }

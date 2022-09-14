@@ -13,30 +13,33 @@
 
   <!-- Pixel Glass -->
   <!-- <style>
-  HTML {
-    background-repeat: no-repeat;
-    background-position:  50% 0;
-    /* По умолчанию показывается мобильный макет */
-    background-image: url( "./img/Group.png" );
-  }
-  /* Планшет */
-  @media ( min-width: 768px ) {
     HTML {
-      /* Планшетный макет */
-      background-image: url( "../img/pixel-glass/Tablet.png" );
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию показывается мобильный макет */
+      background-image: url("./img/Group.png");
     }
-  }
-  /* Десктоп */
-  @media ( min-width: 1300px ) {
-    HTML {
-      /* Десктопный макет */
-      background-image: url( "../img/pixel-glass/Desktop.png" );
+
+    /* Планшет */
+    @media (min-width: 768px) {
+      HTML {
+        /* Планшетный макет */
+        background-image: url("../img/pixel-glass/Tablet.png");
+      }
     }
-  }
-  BODY {
-    opacity: .5;
-  }
-</style> -->
+
+    /* Десктоп */
+    @media (min-width: 1300px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("../img/pixel-glass/Desktop.png");
+      }
+    }
+
+    BODY {
+      opacity: .5;
+    }
+  </style> -->
   <!-- Pixel Glass -->
 </head>
 
@@ -147,7 +150,7 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков - «Drink2Go»</h1>
     <section class="features wrapper">
       <h2 class="features__title title">Главные причины выбрать Drink2Go</h2>
-      <span class="features__badge badge">Преимущества</span>
+      <h4 class="features__badge badge">Преимущества</h4>
       <dl class="features__features-list features-list">
         <div class="features-list__item features-list__item--speed">
           <dt class="features-list__title title">Скорость</dt>
@@ -167,12 +170,12 @@
         </div>
       </dl>
     </section>
-    <section class="catalog wrapper">
+    <section class="catalog">
       <h2 class="catalog__title title">Каталог кофейных напитков</h2>
-      <span class="catalog__badge badge">Каталог</span>
-      <section class="catalog__filter">
+      <h4 class="catalog__badge badge">Каталог</h4>
+      <section class="catalog__filter wrapper">
         <h3 class="visually-hidden">Фильтр товаров</h3>
-        <form class="filter" action="" method="get">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter__fieldset">
             <legend class="filter__title title">Цена</legend>
             <div class="filter__range-filter range-filter">
@@ -185,91 +188,111 @@
               </div>
               <div class="range-filter__price-wrapper">
                 <label class="visually-hidden" for="price-min">от</label>
-                <input class="range-filter__price  range-filter__price--min-price" id="price-min" type="number" name="min-price" placeholder="0">
+                <input class="range-filter__price  range-filter__price--min-price" id="price-min" type="number"
+                  name="min-price" placeholder="0">
                 <label class="visually-hidden" for="price-max">до</label>
-                <input class="range-filter__price range-filter__price--max-price" id="price-max" type="number" name="max-price" value="900">
+                <input class="range-filter__price range-filter__price--max-price" id="price-max" type="number"
+                  name="max-price" value="900">
               </div>
             </div>
           </fieldset>
           <fieldset class="filter__fieldset">
             <legend class="filter__title title">Наличие молока</legend>
-            <ul class="filter__radio-list">
+            <ul class="filter__input-list filter__input-list--radio">
               <li class="filter__radio-item">
-                <input class="visually-hidden" type="radio" id="" name="" value="" checked>
-                <label class="filter__label filter__radio-label" for="">Неважно</label>
+                <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter"
+                  value="no-matter" checked>
+                <label class="filter__label filter__radio-label" for="milk-no-matter">Неважно</label>
               </li>
-              <li>
-                <label>
-                  Только животное
-                  <input type="radio">
-                </label>
+              <li class="filter__radio-item">
+                <input class="visually-hidden" type="radio" name="availability-milk" id="milk-animal" value="amimal">
+                <label class="filter__label filter__radio-label" for="milk-animal">Только животное</label>
               </li>
-              <li>
-                <label>
-                  Только растительное
-                  <input type="radio">
-                </label>
+              <li class="filter__radio-item">
+                <input class="visually-hidden" type="radio" name="availability-milk" id="milk-plant" value="plant">
+                <label class="filter__label filter__radio-label" for="milk-plant">Только растительное</label>
               </li>
-              <li>
-                <label>
-                  Без молока
-                  <input type="radio" disabled>
-                </label>
+              <li class="filter__radio-item">
+                <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none"
+                  disabled>
+                <label class="filter__label filter__radio-label" for="milk-none">Без молока</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter__fieldset">
             <legend class="filter__title title">Страна произрастания</legend>
-            <ul>
-              <li>
-                <label>
-                  Бразилия
-                  <input type="checkbox" name="" id="" checked>
-                </label>
+            <ul class="filter__input-list filter__input-list--checkbox">
+              <li class="filter__checkbox-item">
+                <input class="visually-hidden" type="checkbox" name="country" id="country-brazil" checked>
+                <label class="filter__label filter__checkbox-label" for="country-brazil">Бразилия</label>
               </li>
-              <li>
-                <label>
-                  Эфиопия
-                  <input type="checkbox" name="" id="">
-                </label>
+              <li class="filter__checkbox-item">
+                <input class="visually-hidden" type="checkbox" name="country" id="country-ethiopia">
+                <label class="filter__label filter__checkbox-label" for="country-ethiopia">Эфиопия</label>
               </li>
-              <li>
-                <label>
-                  Колумбия
-                  <input type="checkbox" name="" id="">
-                </label>
+              <li class="filter__checkbox-item">
+                <input class="visually-hidden" type="checkbox" name="country" id="country-columbia">
+                <label class="filter__label filter__checkbox-label" for="country-columbia">Колумбия</label>
               </li>
-              <li>
-                <label>
-                  Коста-Рика
-                  <input type="checkbox" name="" id="">
-                </label>
+              <li class="filter__checkbox-item">
+                <input class="visually-hidden" type="checkbox" name="country" id="country-costa-rika">
+                <label class="filter__label filter__checkbox-label" for="country-costa-rika">Коста-Рика</label>
               </li>
-              <li>
-                <label>
-                  Перу
-                  <input type="checkbox" name="" id="" disabled>
-                </label>
+              <li class="filter__checkbox-item">
+                <input class="visually-hidden" type="checkbox" name="country" id="country-peru" disabled>
+                <label class="filter__label filter__checkbox-label" for="country-peru">Перу</label>
               </li>
             </ul>
           </fieldset>
-          <button class="button" type="submit">Применить фильтр</button>
-          <button class="button" type="reset">Сбросить фильтр</button>
+          <div class="filter__submit-wrapper">
+            <ul class="filter__submit-list">
+              <li class="filter__submit-item">
+                <button class="filter__button button" type="submit">Применить фильтр</button>
+              </li>
+              <li class="filter__submit-item">
+                <button class="filter__button filter__button--reset button" type="reset">Сбросить фильтр</button>
+              </li>
+            </ul>
+          </div>
         </form>
       </section>
       <section class="catalog__products">
         <h3 class="visually-hidden">Список товаров</h3>
-        <div class="sort">
-          <label>
-            Сортировка:
-            <select name="" id="">
-              <option value="default">По умолчанию</option>
-              <option value="high">Сначала дорогие</option>
-              <option value="low">Сначала дешевые</option>
-              <option value="high-rating">Высокий рейтинг</option>
-            </select>
-          </label>
-        </div>
+        <!-- <form class="catalog__sort sort">
+          <label class="sort__label" for="">Сортировка:</label>
+          <select class="sort__select" name="" id="">
+            <option class="sort__option" value="">По умолчанию</option>
+            <option class="sort__option" value="">Сначала дорогие</option>
+            <option class="sort__option" value="">Сначала дешевые</option>
+            <option class="sort__option" value="">Высокий рейтинг</option>
+          </select>
+        </form> -->
+        <form class="" action="">
+          <fieldset class="sort">
+            <legend class="sort__title">Сортировка:</legend>
+            <div class="sort__active" data-default="sort-default">По умолчанию</div>
+            <ul class="sort__content-list">
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-default" type="radio" value="default" name="select-sort"
+                  checked />
+                <label class="sort__label" for="sort-default">По умолчанию</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-high" type="radio" value="high" name="select-sort" />
+                <label class="sort__label" for="sort-high">Сначала дорогие</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-low" type="radio" value="low" name="select-sort" />
+                <label class="sort__label" for="sort-low">Сначала дешевые</label>
+              </li>
+              <li class="sort__item">
+                <input class="visually-hidden" id="sort-high-rating" type="radio" value="high-rating"
+                  name="select-sort" />
+                <label class="sort__label" for="sort-high-rating">Высокий рейтинг</label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
         <ul>
           <li>
             <article>
@@ -462,9 +485,10 @@
         </li>
       </ul>
     </section>
+    <a href="https://htmlacademy.ru/intensive/adaptive">Разработано в</a>
   </footer>
 
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>
