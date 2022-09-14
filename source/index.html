@@ -256,43 +256,26 @@
           </div>
         </form>
       </section>
-      <section class="catalog__products">
+      <section class="catalog__products products wrapper">
         <h3 class="visually-hidden">Список товаров</h3>
-        <!-- <form class="catalog__sort sort">
-          <label class="sort__label" for="">Сортировка:</label>
-          <select class="sort__select" name="" id="">
-            <option class="sort__option" value="">По умолчанию</option>
-            <option class="sort__option" value="">Сначала дорогие</option>
-            <option class="sort__option" value="">Сначала дешевые</option>
-            <option class="sort__option" value="">Высокий рейтинг</option>
-          </select>
-        </form> -->
-        <form class="" action="">
-          <fieldset class="sort">
-            <legend class="sort__title">Сортировка:</legend>
-            <div class="sort__active" data-default="sort-default">По умолчанию</div>
-            <ul class="sort__content-list">
-              <li class="sort__item">
-                <input class="visually-hidden" id="sort-default" type="radio" value="default" name="select-sort"
-                  checked />
-                <label class="sort__label" for="sort-default">По умолчанию</label>
-              </li>
-              <li class="sort__item">
-                <input class="visually-hidden" id="sort-high" type="radio" value="high" name="select-sort" />
-                <label class="sort__label" for="sort-high">Сначала дорогие</label>
-              </li>
-              <li class="sort__item">
-                <input class="visually-hidden" id="sort-low" type="radio" value="low" name="select-sort" />
-                <label class="sort__label" for="sort-low">Сначала дешевые</label>
-              </li>
-              <li class="sort__item">
-                <input class="visually-hidden" id="sort-high-rating" type="radio" value="high-rating"
-                  name="select-sort" />
-                <label class="sort__label" for="sort-high-rating">Высокий рейтинг</label>
-              </li>
-            </ul>
-          </fieldset>
-        </form>
+        <div class="products__sort sort">
+          <p class="sort__title">Сортировка: </p>
+          <button class="sort__select" type="button">По умолчанию</button>
+          <ul class="sort__list">
+            <li class="sort__item">
+              <a class="sort__link sort__link--active" href="#">По умолчанию</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">Сначала дорогие</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">Сначала дешёвые</a>
+            </li>
+            <li class="sort__item">
+              <a class="sort__link" href="#">Высокий рейтинг</a>
+            </li>
+          </ul>
+        </div>
         <ul>
           <li>
             <article>

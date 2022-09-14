@@ -1,23 +1,31 @@
-const selectSingle = document.querySelector('.sort');
-const selectSingle_title = selectSingle.querySelector('.sort__active');
-const selectSingle_labels = selectSingle.querySelectorAll('.sort__label');
+'use strict'
 
-// Toggle menu
-selectSingle_title.addEventListener('click', () => {
-  if ('active' === selectSingle.getAttribute('data-state')) {
-    selectSingle.setAttribute('data-state', '');
-  } else {
-    selectSingle.setAttribute('data-state', 'active');
-  }
+const sort = document.querySelector('.sort');
+const sortSelectButton = sort.querySelector('.sort__select');
+const sortList = sort.querySelector('.sort__list');
+const sortLinks = sortList.querySelectorAll('.sort__link');
+
+
+/* Открываем.закрываем список сортровки */
+sortSelectButton.addEventListener('click', () => {
+  sortList.classList.toggle('sort__list--open');
+  sortSelectButton.classList.toggle('sort__select--open');
 });
 
-// Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-  selectSingle_labels[i].addEventListener('click', (evt) => {
-    selectSingle_title.textContent = evt.target.textContent;
-    selectSingle.setAttribute('data-state', '');
-  });
-}
+/* Меняем выбранный вид сортировки */
+sortList.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  const sortSelectType = evt.target;
+
+  sortLinks.forEach((link) => {
+    link.classList.remove('sort__link--current');
+  })
+
+  sortSelectType.classList.add('sort__link--current');
+  sortList.classList.remove('show-sort-list');
+  sortSelectButton.classList.remove('show-sort-list');
+  sortSelectButton.textContent = sortSelectType.textContent;
+})
 
 
 
