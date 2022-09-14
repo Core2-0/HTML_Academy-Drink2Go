@@ -1,5 +1,6 @@
 'use strict'
 
+// Доделать закрывание с кнопки и по области
 const sort = document.querySelector('.sort');
 const sortSelectButton = sort.querySelector('.sort__select');
 const sortList = sort.querySelector('.sort__list');
@@ -19,34 +20,29 @@ sortList.addEventListener('click', (evt) => {
 
   sortLinks.forEach((link) => {
     link.classList.remove('sort__link--current');
-  })
+  });
 
   sortSelectType.classList.add('sort__link--current');
   sortList.classList.remove('show-sort-list');
   sortSelectButton.classList.remove('show-sort-list');
   sortSelectButton.textContent = sortSelectType.textContent;
-})
+});
 
+const mainSiteList = document.querySelector('.main-nav__site-list');
+const navToggle = document.querySelector('.main-nav__toggle-menu');
 
+mainSiteList.classList.remove('main-nav__site-list--nojs');
+navToggle.classList.remove('main-nav__toggle-menu--nojs');
 
+if (!mainSiteList.classList.contains('main-nav__site-list--closed')) {
+  mainSiteList.classList.add('main-nav__site-list--closed');
+}
 
-
-
-
-// const navMain = document.querySelector('.main-nav');
-// const navToggle = document.querySelector('.main-nav__toggle');
-
-// navMain.classList.remove('main-nav--nojs');
-
-// navToggle.addEventListener('click', function() {
-//   if (navMain.classList.contains('main-nav--closed')) {
-//     navMain.classList.remove('main-nav--closed');
-//     navMain.classList.add('main-nav--opened');
-//   } else {
-//     navMain.classList.add('main-nav--closed');
-//     navMain.classList.remove('main-nav--opened');
-//   }
-// });
+navToggle.addEventListener('click', () => {
+  mainSiteList.classList.toggle('main-nav__site-list--closed');
+  navToggle.classList.toggle('main-nav__toggle-menu--opened');
+  navToggle.classList.toggle('main-nav__toggle-menu--closed');
+});
 
 // const link = document.querySelector('.js-login');
 // const popup = document.querySelector('.modal');

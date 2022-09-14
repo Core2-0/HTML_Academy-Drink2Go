@@ -1,26 +1,30 @@
 .product-card {
+  display: flex;
+  flex-direction: column;
   background-color: $base_white;
   padding: 40px 20px 20px;
+  max-width: 280px;
 }
 
 .product-card__link {
-  display: flex;
-  flex-direction: column;
   text-decoration: none;
   color: $base_black;
-  margin-bottom: 4px;
+
+  &--picture {
+    align-self: center;
+    order: -1;
+    margin-bottom: 18px;
+  }
+
+  &--title {
+    margin-bottom: 4px;
+  }
 }
 
 .product-card__title {
   font-size: 18px;
   line-height: 32px;
-  order: 1;
   margin: 0;
-}
-
-.product-card__picture {
-  text-align: center;
-  margin-bottom: 18px;
 }
 
 .product-card__description {
@@ -45,7 +49,7 @@
       vertical-align: middle;
       width: 20px;
       height: 16px;
-      background-image: url(../../img/button-icons/union.svg);
+      background-image: url(../img/icons/button-icons/cart_add.svg);
       background-position: center;
       background-repeat: no-repeat;
       margin-right: 6px;

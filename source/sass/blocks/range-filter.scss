@@ -3,6 +3,7 @@
   padding: 10px 0;
   border-radius: 5px;
   margin-bottom: 25px;
+  user-select: none;
 }
 
 .range-filter__scale {
@@ -55,7 +56,29 @@
   &:active {
     &::after {
       background-color: $base_primary;
-      transition: all .2s ease-out;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.range-filter__controls--disabled .range-filter__bar {
+  background-color: $base_grey;
+}
+
+.range-filter__controls--disabled .range-filter__toggle {
+  border-color: $base_grey;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: transparent;
     }
   }
 }
@@ -87,4 +110,15 @@
   background-color: $base_white;
   font-family: inherit;
   font-size: 16px;
+
+  &:focus {
+    border-color: $primary_darker;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $lightest_grey;
+    border-color: $light_grey;
+    color: $base_grey;
+  }
 }
