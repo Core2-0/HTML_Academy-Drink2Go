@@ -1,5 +1,6 @@
 .products__list {
   @include list-reset;
+  margin-bottom: 40px;
 }
 
 .products__item {
@@ -8,4 +9,8 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.products__pagination {
+  margin-bottom: 45px;
 }

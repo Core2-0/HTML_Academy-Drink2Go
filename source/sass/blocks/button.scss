@@ -13,4 +13,32 @@
   cursor: pointer;
   background-color: $base_primary;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary_lighter;
+  }
+
+  &:active {
+    background-color: $primary_darker;
+  }
+
+  &:disabled {
+    background-color: $base_grey;
+  }
+
+  &--extra {
+    background-color: $base_white;
+    color: $base_primary;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $base_white;
+    }
+
+    &:disabled {
+      background-color: $light_grey;
+    }
+  }
 }

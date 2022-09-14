@@ -32,10 +32,7 @@
     top: 50%;
     right: 10px;
     display: block;
-    width: 5px;
-    height: 5px;
-    border-top: 2px solid $base_primary;
-    border-right: 2px solid $base_primary;
+    @include arrow;
     transform: translateY(-50%) rotate(135deg);
     transition: all .2s ease-out;
   }

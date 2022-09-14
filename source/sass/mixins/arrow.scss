@@ -1,0 +1,6 @@
+@mixin arrow {
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid $base_primary;
+  border-right: 2px solid $base_primary;
+}

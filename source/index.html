@@ -12,7 +12,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -39,7 +39,7 @@
     BODY {
       opacity: .5;
     }
-  </style>
+  </style> -->
   <!-- Pixel Glass -->
 </head>
 
@@ -250,7 +250,7 @@
                 <button class="filter__button button" type="submit">Применить фильтр</button>
               </li>
               <li class="filter__submit-item">
-                <button class="filter__button filter__button--reset button" type="reset">Сбросить фильтр</button>
+                <button class="filter__button button button--extra" type="reset">Сбросить фильтр</button>
               </li>
             </ul>
           </div>
@@ -404,22 +404,22 @@
             </article>
           </li>
         </ul>
-        <div class="pagination">
-          <ul class="pagination-list">
-            <li>
-              <a href="#">Предыдущая</a>
+        <div class="products__pagination pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--prev button button--extra" href="#" aria-label="Предыдущая страница"></a>
             </li>
-            <li>
-              <a href="#">1</a>
+            <li class="pagination__item">
+              <a class="pagination__link button button--extra" href="#">1</a>
             </li>
-            <li>
-              <a class="current">2</a>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--current button button--extra">2</a>
             </li>
-            <li>
-              <a href="#">3</a>
+            <li class="pagination__item">
+              <a class="pagination__link button button--extra" href="#">3</a>
             </li>
-            <li>
-              <a href="#">Следующая</a>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--next button button--extra" href="#" aria-label="Следующая страница"></a>
             </li>
           </ul>
         </div>

@@ -9,6 +9,7 @@
 // Mixins
 @import "./mixins/list-reset.scss";
 @import "./mixins/fieldset-reset.scss";
+@import "./mixins/arrow.scss";
 
 // Blocks
 @import "./blocks/title.scss";
@@ -35,3 +36,6 @@
 @import "./blocks/products.scss";
 @import "./blocks/sort.scss";
 @import "./blocks/product-card.scss";
+@import "./blocks/pagination.scss";
+// Map
+@import "./blocks/map.scss";
