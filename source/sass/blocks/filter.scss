@@ -176,14 +176,22 @@
   align-items: center;
 }
 
+.filter__submit-item {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .filter__button {
+  min-width: 160px;
   display: block;
   font-size: 13px;
-  margin-bottom: 24px;
+  line-height: 25px;
   padding: 10px 14px;
 
   &--reset {
-    margin-bottom: 0;
     background-color: $base_white;
     color: $base_primary;
   }

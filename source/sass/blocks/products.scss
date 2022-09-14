@@ -1,1 +1,11 @@
+.products__list {
+  @include list-reset;
+}
 
+.products__item {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
