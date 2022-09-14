@@ -1,0 +1,21 @@
+.footer-nav__title {
+  margin: 0 0 10px 0;
+}
+
+.footer-nav__list {
+  @include list-reset;
+}
+
+.footer-nav__item {
+  padding: 8px 0;
+}
+
+.footer-nav__link {
+  color: $base_black;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+}

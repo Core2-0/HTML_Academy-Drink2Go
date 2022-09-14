@@ -150,7 +150,7 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков - «Drink2Go»</h1>
     <section class="features wrapper">
       <h2 class="features__title title">Главные причины выбрать Drink2Go</h2>
-      <h4 class="features__badge badge">Преимущества</h4>
+      <span class="features__badge badge">Преимущества</span>
       <dl class="features__features-list features-list">
         <div class="features-list__item features-list__item--speed">
           <dt class="features-list__title title">Скорость</dt>
@@ -407,7 +407,8 @@
         <div class="products__pagination pagination">
           <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--prev button button--extra" href="#" aria-label="Предыдущая страница"></a>
+              <a class="pagination__link pagination__link--prev button button--extra" href="#"
+                aria-label="Предыдущая страница"></a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link button button--extra" href="#">1</a>
@@ -419,7 +420,8 @@
               <a class="pagination__link button button--extra" href="#">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagination__link pagination__link--next button button--extra" href="#" aria-label="Следующая страница"></a>
+              <a class="pagination__link pagination__link--next button button--extra" href="#"
+                aria-label="Следующая страница"></a>
             </li>
           </ul>
         </div>
@@ -430,63 +432,70 @@
     </section>
   </main>
   <footer class="page__footer page-footer">
-    <section class="social">
+    <section class="page-footer__social footer-social wrapper">
       <h2 class="visually-hidden">Социальные сети</h2>
-      <ul>
-        <li>
-          <a class="vk" href="https://vk.com/" target="_blank">Vk</a>
+      <picture>
+        <img src="./img/logo/logo_short.svg" alt="Логотип «Drink2Go»">
+      </picture>
+      <ul class="footer-social__list">
+        <li class="footer-social__item">
+          <a class="footer-social__link footer-social__link--vk" href="https://vk.com/" target="_blank">Vk</a>
         </li>
         <li>
-          <a class="pinterest" href="https://ru.pinterest.com/" target="_blank">Pinterest</a>
+          <a class="footer-social__link footer-social__link--pinterest" href="https://ru.pinterest.com/"
+            target="_blank">Pinterest</a>
         </li>
         <li>
-          <a class="ok" href="https://ok.ru/" target="_blank">Ok</a>
+          <a class="footer-social__link footer-social__link--ok" href="https://ok.ru/" target="_blank">Ok</a>
         </li>
       </ul>
     </section>
-    <nav class="">
-      <h2>Интернет-магазин</h2>
-      <ul>
-        <li>
-          <a href="#">Каталог</a>
+    <nav class="page-footer__footer-nav footer-nav wrapper">
+      <h4 class="footer-nav__title title title--extra">Интернет-магазин</h4>
+      <ul class="footer-nav__list">
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Каталог</a>
         </li>
-        <li>
-          <a href="#">Доставка</a>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Доставка</a>
         </li>
-        <li>
-          <a href="#">Способ оплаты</a>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Способы оплаты</a>
         </li>
-        <li>
-          <a href="#">О нас</a>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">О нас</a>
         </li>
       </ul>
     </nav>
-    <section class="media">
-      <h2>Медиа</h2>
-      <ul>
-        <li>
-          <a href="#">Блог</a>
+    <nav class="page-footer__footer-nav footer-nav wrapper">
+      <h4 class="footer-nav__title title title--extra">Медиа</h4>
+      <ul class="footer-nav__list">
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Блог</a>
         </li>
-        <li>
-          <a href="#">Информация для сми</a>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Информация для сми</a>
         </li>
-        <li>
-          <a href="#">Правовая информация</a>
+        <li class="footer-nav__item">
+          <a class="footer-nav__link" href="#">Правовая информация</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="page-footer__contacts footer-contacts wrapper">
+      <h4 class="footer-contacts__title title title--extra">Контакты</h4>
+      <ul class="footer-contacts__list">
+        <li class="footer-contacts__item">
+          <address class="footer-contacts__link footer-contacts__link--address">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+        </li>
+        <li class="footer-contacts__item">
+          <a class="footer-contacts__link footer-contacts__link--tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
         </li>
       </ul>
     </section>
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <ul>
-        <li>
-          <address>Санкт-Петербург, набережная реки Карповки, дом 5</address>
-        </li>
-        <li>
-          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-        </li>
-      </ul>
-    </section>
-    <a href="https://htmlacademy.ru/intensive/adaptive">Разработано в</a>
+    <p class="page-footer__developers">
+      Разработано в
+      <a class="page-footer__developers-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </p>
   </footer>
 
   <script src="js/script.js"></script>
