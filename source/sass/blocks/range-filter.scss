@@ -35,6 +35,29 @@
   &--max {
     left: 160px;
   }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      display: block;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $primary_opacity_25;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $base_primary;
+      transition: all .2s ease-out;
+    }
+  }
 }
 
 .range-filter__price-wrapper {
