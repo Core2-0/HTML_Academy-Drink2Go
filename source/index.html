@@ -52,7 +52,9 @@
     <nav class="page-header__main-nav main-nav wrapper">
       <a class="main-nav__logo">
         <picture>
-          <img src="img/logo/logo.svg" alt="Логотип «Drink2Go»" width="32" height="60">
+          <source media="(min-width: 768px)" srcset="img/logo/logo_short.svg">
+
+          <img class="main-nav__logo-image" src="img/logo/logo.svg" alt="Логотип «Drink2Go»" width="32" height="60">
         </picture>
       </a>
       <button class="main-nav__toggle-menu main-nav__toggle-menu--closed main-nav__toggle-menu--nojs" type="button">
@@ -99,18 +101,21 @@
             <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
               <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider/tablet/flat_white.webp, img/slider/tablet/flat_white@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/slider/mobile/flat_white_mobile.webp, img/slider/mobile/flat_white_mobile@2x.webp 2x">
+                  srcset="img/slider/mobile/flat_white.webp, img/slider/mobile/flat_white@2x.webp 2x">
 
-                <img class="main-slider__image" src="img/slider/mobile/flat_white_mobile.png"
-                  srcset="img/slider/mobile/flat_white_mobile@2x.png 2x" width="280" height="280"
+                <source media="(min-width: 768px)"
+                  srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/flat_white@2x.jpg 2x">
+                <img class="main-slider__image" src="img/slider/mobile/flat_white.png"
+                  srcset="img/slider/mobile/flat_white@2x.png 2x" width="280" height="280"
                   alt="Напиток Декаф Флэт Уайт">
               </picture>
               <span class="main-slider__badge badge">Новинка!</span>
               <p class="main-slider__text">
                 Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для
-                расслабления
-                после тяжёлого рабочего дня
+                расслабления после тяжёлого рабочего дня
               </p>
               <div class="main-slider__footer">
                 <span class="main-slider__price price price--old-price">295<span>&#8381;</span></span>
@@ -123,11 +128,15 @@
             <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Лавандовый Латте</h3>
               <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider/mobile/lavender.webp, img/slider/mobile/lavender@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/slider/mobile/lavender_mobile.webp, img/slider/mobile/lavender_mobile@2x.webp 2x">
+                  srcset="img/slider/mobile/lavender.webp, img/slider/mobile/lavender@2x.webp 2x">
 
-                <img class="main-slider__image" src="img/slider/mobile/lavender_mobile.png"
-                  srcset="img/slider/mobile/lavender_mobile@2x.png 2x" width="280" height="280"
+                <source media="(min-width: 768px)"
+                  srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/lavender@2x.jpg 2x">
+                <img class="main-slider__image" src="img/slider/mobile/lavender.png"
+                  srcset="img/slider/mobile/lavender@2x.png 2x" width="280" height="280"
                   alt="Новинка - Лавандовый Латте">
               </picture>
               <span class="main-slider__badge badge">Новинка!</span>
@@ -146,11 +155,15 @@
             <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Тройной Эспрессо</h3>
               <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider/mobile/espresso.webp, img/slider/mobile/espresso@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/slider/mobile/espresso_mobile.webp, img/slider/mobile/espresso_mobile@2x.webp 2x">
+                  srcset="img/slider/mobile/espresso.webp, img/slider/mobile/espresso@2x.webp 2x">
 
-                <img class="main-slider__image" src="img/slider/mobile/espresso_mobile.png"
-                  srcset="img/slider/mobile/espresso_mobile@2x.png 2x" width="280" height="280"
+                <source media="(min-width: 768px)"
+                  srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/espresso@2x.jpg 2x">
+                <img class="main-slider__image" src="img/slider/mobile/espresso.png"
+                  srcset="img/slider/mobile/espresso@2x.png 2x" width="280" height="280"
                   alt="Новинка - Тройной Эспрессо">
               </picture>
               <span class="main-slider__badge badge">Новинка!</span>
@@ -473,6 +486,7 @@
     <section class="page-footer__social footer-social wrapper">
       <h2 class="visually-hidden">Социальные сети</h2>
       <picture class="footer-social__logo">
+        <source media="(min-width: 768px)" srcset="img/logo/logo_long.svg">
         <img class="footer-social__image" src="img/logo/logo_short.svg" alt="Логотип «Drink2Go»" width="82" height="36">
       </picture>
       <ul class="footer-social__list">

@@ -12,4 +12,14 @@
     background-image: url(../img/map/map_bg_mobile@2x.png);
     background-image: url(../img/map/map_bg_mobile@2x.webp);
   }
+
+  @media (min-width: $tablet-width) {
+    background-image: url(../img/map/map_bg_tablet.png);
+    background-image: url(../img/map/map_bg_tablet.webp);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/map/map_bg_tablet@2x.png);
+      background-image: url(../img/map/map_bg_tablet@2x.webp);
+    }
+  }
 }

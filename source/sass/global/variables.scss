@@ -1,17 +1,21 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1300px;
+$desktop-width: 1440px;
 
 :root {
   --content-padding-mobile: 20px;
+  --content-padding-desktop: 40px;
 
   --content-width-mobile: #{"calc(#{$mobile-width} - var(--content-padding-mobile) * 2)"};
+  --content-width-desktop: #{"calc(#{$mobile-width} - var(--content-padding-desktop) * 2)"};
 }
 
 // Font
 $font-family-base: "Montserrat", "Courier new", sans-serif;
 $font-size-base: 14px;
 $font-line-height-base: 20px;
+$font-size-base--tablet: 16px;
+$font-line-height-base: 24px;
 
 // Colors
 // Base Colors

@@ -28,18 +28,18 @@ sortList.addEventListener('click', (evt) => {
   sortSelectButton.textContent = sortSelectType.textContent;
 });
 
-const mainSiteList = document.querySelector('.main-nav__site-list');
+const mainSiteList = document.querySelector('.site-list');
 const navToggle = document.querySelector('.main-nav__toggle-menu');
 
 mainSiteList.classList.remove('main-nav__site-list--nojs');
 navToggle.classList.remove('main-nav__toggle-menu--nojs');
 
-if (!mainSiteList.classList.contains('main-nav__site-list--closed')) {
-  mainSiteList.classList.add('main-nav__site-list--closed');
+if (!mainSiteList.classList.contains('site-list--closed')) {
+  mainSiteList.classList.add('site-list--closed');
 }
 
 navToggle.addEventListener('click', () => {
-  mainSiteList.classList.toggle('main-nav__site-list--closed');
+  mainSiteList.classList.toggle('site-list--closed');
   navToggle.classList.toggle('main-nav__toggle-menu--opened');
   navToggle.classList.toggle('main-nav__toggle-menu--closed');
 });
