@@ -9,7 +9,8 @@
 
 .main-slider__item {
   padding-top: 20px;
-  padding-bottom: 60px;
+  min-height: 638px;
+
   &--flat-white {
     background-color: $flat_white;
   }
@@ -30,11 +31,10 @@
   align-items: center;
   max-width: 280px;
   margin: 0 auto;
-  min-height: 577px;
 }
 
 .main-slider__title {
-  margin: 0 0 9px 0;
+  margin: 0 0 10px 0;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.02em;
@@ -43,7 +43,7 @@
 
 .main-slider__badge {
   order: 1;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .main-slider__picture {
@@ -54,10 +54,10 @@
 .main-slider__text {
   order: 3;
   margin: 0 0 22px 0;
+  line-height: 20px;
 }
 
 .main-slider__footer {
-  width: 230px;
   order: 4;
 }
 
@@ -113,4 +113,10 @@
     transform: rotate(-135deg);
     left: 7px;
   }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: $base_white;
 }

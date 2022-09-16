@@ -9,4 +9,14 @@
     color: $base_primary;
     letter-spacing: 0.02em;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+
+    &--extra {
+      font-size: 14px;
+      line-height: 28px;
+    }
+  }
 }

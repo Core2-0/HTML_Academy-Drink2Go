@@ -51,8 +51,7 @@ const swiper = new Swiper('.main-slider__container', {
   },
 
   breakpoints: {
-    // when window width is >= 480px
-    768: {
+    1380: {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

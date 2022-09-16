@@ -29,6 +29,7 @@
   grid-auto-flow: column;
   justify-content: end;
   gap: 19px;
+  margin-right: var(--content-padding-mobile);
 }
 
 .footer-social__link {
