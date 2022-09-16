@@ -1,9 +1,19 @@
+.range-filter {
+  @media (min-width: $tablet-width) {
+    margin-left: 7px;
+  }
+}
+
 .range-filter__controls {
   position: relative;
   padding: 10px 0;
   border-radius: 5px;
   margin-bottom: 25px;
   user-select: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
 }
 
 .range-filter__scale {
@@ -12,7 +22,7 @@
 }
 
 .range-filter__bar {
-  width: 70%;
+  width: 84%;
   height: 4px;
   background-color: $primary_lighter;
 }
@@ -30,11 +40,15 @@
   cursor: pointer;
 
   &--min {
-    left: 18px;
+    left: 0;
   }
 
   &--max {
-    left: 160px;
+    left: 84%;
+
+    @media (min-width: $tablet-width) {
+      left: 80%;
+    }
   }
 
   &:hover,
@@ -84,7 +98,9 @@
 }
 
 .range-filter__price-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  column-gap: 35px;
   justify-content: space-between;
   position: relative;
 
@@ -110,6 +126,10 @@
   background-color: $base_white;
   font-family: inherit;
   font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 69px;
+  }
 
   &:focus {
     border-color: $primary_darker;

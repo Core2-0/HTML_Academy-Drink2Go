@@ -14,4 +14,9 @@
   font-weight: 400;
   color: $base_black;
   background-color: $base_white;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-base--tablet;
+    line-height: $font-line-height-tablet;
+  }
 }

@@ -1,5 +1,15 @@
 .footer-nav__list {
   @include list-reset;
+  padding-right: var(--content-padding-mobile);
+  padding-left: var(--content-padding-mobile);
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    justify-content: start;
+    gap: 30px;
+    padding-right: 0;
+  }
 }
 
 .footer-nav__item {
@@ -13,10 +23,24 @@
   &:last-child {
     border-bottom: 1px solid $base_secondary;
   }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
 }
 
 .footer-nav__title {
   margin: 0 0 17px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .footer-nav__address {

@@ -1,63 +1,68 @@
 .features-list {
   @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 339px);
+    column-gap: 30px;
+    row-gap: 50px;
+    text-align: left;
+    justify-content: center;
+  }
 }
 
 .features-list__item {
-  margin-bottom: 32px;
+  position: relative;
+  margin-bottom: 34px;
+  padding-top: 64px;
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-left: 72px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      left: 28px;
+    }
+  }
+
   &--speed {
     &::before {
-      content: "";
-      display: block;
-      width: 52px;
-      height: 56px;
       background-image: url(../img/icons/features_icons/speed_icon.svg);
-      background-repeat: no-repeat;
-      margin: 0 auto 10px;
     }
   }
 
   &--comfort {
     &::before {
-      content: "";
-      display: block;
-      width: 52px;
-      height: 56px;
       background-image: url(../img/icons/features_icons/comfort_icon.svg);
-      background-repeat: no-repeat;
-      margin: 0 auto 10px;
     }
-
   }
 
   &--energy {
     &::before {
-      content: "";
-      display: block;
-      width: 52px;
-      height: 56px;
       background-image: url(../img/icons/features_icons/energy_icon.svg);
-      background-repeat: no-repeat;
-      margin: 0 auto 10px;
     }
-
   }
 
   &--eco {
     &::before {
-      content: "";
-      display: block;
-      width: 52px;
-      height: 56px;
       background-image: url(../img/icons/features_icons/eco_icon.svg);
-      background-repeat: no-repeat;
-      margin: 0 auto 10px;
     }
-
   }
 }
 
@@ -65,6 +70,12 @@
   font-size: 18px;
   line-height: 32px;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
 }
 
 .features-list__description {

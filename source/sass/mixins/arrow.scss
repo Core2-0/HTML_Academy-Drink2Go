@@ -1,6 +1,6 @@
 @mixin arrow($w : 5px, $h : 5px, $color: $base_primary) {
-  width: $w;
-  height: $h;
+  min-width: $w;
+  min-height: $h;
   border-top: 2px solid $base_primary;
   border-right: 2px solid $color;
 }

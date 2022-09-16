@@ -9,17 +9,34 @@
 
 .main-slider__item {
   padding-top: 20px;
-  padding-bottom: 60px;
+  min-height: 635px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 59px;
+  }
+
   &--flat-white {
     background-color: $flat_white;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(180deg, $flat_white 0, $flat_white 77%, $base_white 77%);
+    }
   }
 
   &--latte {
     background-color: $lavender_latte;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(180deg, $lavender_latte 0, $lavender_latte 77%, $base_white 77%);
+    }
   }
 
   &--espresso {
     background-color: $espresso;
+
+    @media (min-width: $tablet-width) {
+      background-image: linear-gradient(180deg, $espresso 0, $espresso 77%, $base_white 77%);
+    }
   }
 }
 
@@ -30,35 +47,69 @@
   align-items: center;
   max-width: 280px;
   margin: 0 auto;
-  min-height: 577px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 608px;
+  }
 }
 
 .main-slider__title {
-  margin: 0 0 9px 0;
+  margin: 0 0 10px 0;
   font-size: 36px;
   line-height: 48px;
   letter-spacing: 0.02em;
   order: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 17px;
+  }
 }
 
 .main-slider__badge {
   order: 1;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .main-slider__picture {
   order: 0;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    order: 5;
+  }
+}
+
+.main-slider__image {
+  width: 280px;
+  height: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+  }
 }
 
 .main-slider__text {
   order: 3;
   margin: 0 0 22px 0;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 21px;
+  }
 }
 
 .main-slider__footer {
-  width: 230px;
   order: 4;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .main-slider__button {
@@ -76,11 +127,19 @@
   top: 0;
   z-index: 10;
 
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     @include arrow(12px, 12px);
     top: 49%;
+
+    @media (min-width: $tablet-width) {
+      top: 37.5%;
+    }
   }
 
   &:hover,
@@ -103,7 +162,11 @@
   right: 0;
   &::before {
     transform: rotate(45deg);
-    right: 7px;
+    right: 3px;
+
+    @media (min-width: $tablet-width) {
+      right: 37px;
+    }
   }
 }
 
@@ -112,5 +175,15 @@
   &::before {
     transform: rotate(-135deg);
     left: 7px;
+
+    @media (min-width: $tablet-width) {
+      left: 37px;
+    }
   }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: $base_white;
 }

@@ -1,14 +1,18 @@
 .pagination__list {
   @include list-reset;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
   justify-content: space-between;
-  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+  }
 }
 
 .pagination__link {
   display: inline-flex;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
+  padding: 0px;
   align-items: center;
   justify-content: center;
   color: $base_primary;
@@ -18,18 +22,33 @@
   text-decoration: none;
   background-color: $base_white;
 
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+  }
+
   &--current {
     background-color: transparent;
     color: $base_black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      color: $base_black;
+      cursor: default;
+    }
   }
 
   &--prev,
   &--next {
-    padding: 0;
-    
     &::before {
       content: "";
       @include arrow;
+
+      @media (min-width: $tablet-width) {
+        border: none;
+        min-width: 150px;
+      }
     }
 
     &:hover,
@@ -37,6 +56,10 @@
       &::before {
         border-top: 2px solid $base_white;
         border-right: 2px solid $base_white;
+
+        @media (min-width: $tablet-width) {
+          border: none;
+        }
       }
     }
   }
@@ -44,12 +67,22 @@
   &--prev {
     &::before {
       transform: rotate(-135deg);
+
+      @media (min-width: $tablet-width) {
+        content: "Назад";
+        transform: none;
+      }
     }
   }
 
   &--next {
     &::before {
       transform: rotate(45deg);
+
+      @media (min-width: $tablet-width) {
+        content: "Вперед";
+        transform: none;
+      }
     }
   }
 }
