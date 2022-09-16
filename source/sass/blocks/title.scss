@@ -1,0 +1,12 @@
+.title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+
+  &--extra {
+    font-size: 14px;
+    line-height: 20px;
+    color: $base_primary;
+    letter-spacing: 0.02em;
+  }
+}

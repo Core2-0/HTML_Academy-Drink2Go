@@ -1,0 +1,124 @@
+.range-filter__controls {
+  position: relative;
+  padding: 10px 0;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  user-select: none;
+}
+
+.range-filter__scale {
+  height: 4px;
+  background-color: $light_grey;
+}
+
+.range-filter__bar {
+  width: 70%;
+  height: 4px;
+  background-color: $primary_lighter;
+}
+
+.range-filter__toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid $primary_lighter;
+  background-color: $base_white;
+  cursor: pointer;
+
+  &--min {
+    left: 18px;
+  }
+
+  &--max {
+    left: 160px;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      display: block;
+      transform: translateX(-50%);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $primary_opacity_25;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $base_primary;
+      transition: all 0.4s ease-out;
+    }
+  }
+}
+
+.range-filter__controls--disabled .range-filter__bar {
+  background-color: $base_grey;
+}
+
+.range-filter__controls--disabled .range-filter__toggle {
+  border-color: $base_grey;
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
+.range-filter__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 8px;
+    height: 2px;
+    background-color: $base_grey;
+  }
+}
+
+.range-filter__price {
+  width: 95px;
+  padding: 8px 10px;
+  text-align: center;
+  color: $base_black;
+  border: 2px solid $primary_lighter;
+  border-radius: 4px;
+  background-color: $base_white;
+  font-family: inherit;
+  font-size: 16px;
+
+  &:focus {
+    border-color: $primary_darker;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $lightest_grey;
+    border-color: $light_grey;
+    color: $base_grey;
+  }
+}

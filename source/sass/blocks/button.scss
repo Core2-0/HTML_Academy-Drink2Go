@@ -1,0 +1,44 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  font-family: inherit;
+  color: $base_white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: $base_primary;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $primary_lighter;
+  }
+
+  &:active {
+    background-color: $primary_darker;
+  }
+
+  &:disabled {
+    background-color: $base_grey;
+  }
+
+  &--extra {
+    background-color: $base_white;
+    color: $base_primary;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $base_white;
+    }
+
+    &:disabled {
+      background-color: $light_grey;
+    }
+  }
+}

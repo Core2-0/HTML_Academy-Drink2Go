@@ -1,0 +1,15 @@
+.map {
+  width: 100%;
+  height: 420px;
+  background-color: $light_grey;
+  background-image: url(../img/map/map_bg_mobile.png);
+  background-image: url(../img/map/map_bg_mobile.webp);
+  background-size: cover;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url(../img/map/map_bg_mobile@2x.png);
+    background-image: url(../img/map/map_bg_mobile@2x.webp);
+  }
+}

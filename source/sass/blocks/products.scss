@@ -1,0 +1,16 @@
+.products__list {
+  @include list-reset;
+  margin-bottom: 40px;
+}
+
+.products__item {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.products__pagination {
+  margin-bottom: 45px;
+}

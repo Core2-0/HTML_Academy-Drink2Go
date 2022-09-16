@@ -1,0 +1,72 @@
+.features-list {
+  @include list-reset;
+}
+
+.features-list__item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--speed {
+    &::before {
+      content: "";
+      display: block;
+      width: 52px;
+      height: 56px;
+      background-image: url(../img/icons/features_icons/speed_icon.svg);
+      background-repeat: no-repeat;
+      margin: 0 auto 10px;
+    }
+  }
+
+  &--comfort {
+    &::before {
+      content: "";
+      display: block;
+      width: 52px;
+      height: 56px;
+      background-image: url(../img/icons/features_icons/comfort_icon.svg);
+      background-repeat: no-repeat;
+      margin: 0 auto 10px;
+    }
+
+  }
+
+  &--energy {
+    &::before {
+      content: "";
+      display: block;
+      width: 52px;
+      height: 56px;
+      background-image: url(../img/icons/features_icons/energy_icon.svg);
+      background-repeat: no-repeat;
+      margin: 0 auto 10px;
+    }
+
+  }
+
+  &--eco {
+    &::before {
+      content: "";
+      display: block;
+      width: 52px;
+      height: 56px;
+      background-image: url(../img/icons/features_icons/eco_icon.svg);
+      background-repeat: no-repeat;
+      margin: 0 auto 10px;
+    }
+
+  }
+}
+
+.features-list__title {
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 4px;
+}
+
+.features-list__description {
+  margin: 0;
+}

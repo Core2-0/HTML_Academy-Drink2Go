@@ -1,0 +1,27 @@
+.user-navigation-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: auto;
+  order: 1;
+}
+
+.user-navigation-list__link {
+  display: block;
+  height: 60px;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: $base_white;
+  color: $base_black;
+
+  &:active {
+    background-color: $base_secondary;
+  }
+}
+
+.user-navigation-list__icon {
+  fill: currentColor;
+  width: 16px;
+  height: 16px;
+}
