@@ -12,13 +12,18 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 349px);
     gap: 30px;
+    margin-bottom: 70px;
   }
 }
 
 .products__item {
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -27,4 +32,8 @@
 
 .products__pagination {
   margin-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 89px;
+  }
 }

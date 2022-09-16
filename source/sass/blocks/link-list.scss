@@ -5,6 +5,10 @@
 .link-list__item {
   margin-bottom: 16px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 12px;
+  }
+
   &--tel {
     margin-bottom: 9px;
   }

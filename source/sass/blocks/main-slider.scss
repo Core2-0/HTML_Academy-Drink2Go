@@ -11,6 +11,10 @@
   padding-top: 20px;
   min-height: 635px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 59px;
+  }
+
   &--flat-white {
     background-color: $flat_white;
 
@@ -55,6 +59,12 @@
   line-height: 48px;
   letter-spacing: 0.02em;
   order: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 17px;
+  }
 }
 
 .main-slider__badge {
@@ -87,12 +97,19 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 100px;
+    padding: 0 20px;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 21px;
   }
 }
 
 .main-slider__footer {
   order: 4;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .main-slider__button {
@@ -110,11 +127,19 @@
   top: 0;
   z-index: 10;
 
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
   &::before {
     content: "";
     position: absolute;
     @include arrow(12px, 12px);
     top: 49%;
+
+    @media (min-width: $tablet-width) {
+      top: 37.5%;
+    }
   }
 
   &:hover,
@@ -137,7 +162,11 @@
   right: 0;
   &::before {
     transform: rotate(45deg);
-    right: 7px;
+    right: 3px;
+
+    @media (min-width: $tablet-width) {
+      right: 37px;
+    }
   }
 }
 
@@ -146,6 +175,10 @@
   &::before {
     transform: rotate(-135deg);
     left: 7px;
+
+    @media (min-width: $tablet-width) {
+      left: 37px;
+    }
   }
 }
 

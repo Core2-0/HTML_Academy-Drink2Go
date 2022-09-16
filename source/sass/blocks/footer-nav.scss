@@ -37,6 +37,10 @@
 
 .footer-nav__title {
   margin: 0 0 17px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .footer-nav__address {
