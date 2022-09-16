@@ -1,5 +1,11 @@
 .footer-nav__list {
   @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    column-gap: 30px;
+  }
 }
 
 .footer-nav__item {

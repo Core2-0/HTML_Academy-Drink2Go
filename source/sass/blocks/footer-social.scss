@@ -3,24 +3,31 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .footer-social__logo {
+  display: flex;
+  align-items: center;
   margin-right: 10px;
-  height: 36px;
+  height: 60px;
 }
 
 .footer-social__image {
   width: 82px;
   height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
 }
 
 .footer-social__list {
   @include list-reset;
   display: grid;
   grid-auto-flow: column;
+  justify-content: end;
   gap: 19px;
 }
 

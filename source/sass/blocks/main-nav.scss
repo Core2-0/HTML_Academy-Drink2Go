@@ -13,10 +13,6 @@
 }
 
 .main-nav__logo {
-  height: 60px;
-  display: block;
-  margin-right: 5px;
-  margin-left: var(--content-padding-mobile);
   order: 0;
 }
 
@@ -25,7 +21,7 @@
   height: 60px;
 
   @media (min-width: $tablet-width) {
-    width: 170px;
+    width: 82px;
   }
 }
 
