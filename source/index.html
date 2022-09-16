@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico">
@@ -17,8 +19,8 @@
       background-repeat: no-repeat;
       background-position: 50% 0;
       /* По умолчанию показывается мобильный макет */
-      /* background-image: url("./img/Group.png"); */
-      background-image: url("./img/Mobile_Opened.png");
+      background-image: url("./img/Group.png");
+      /* background-image: url("./img/Mobile_Opened.png"); */
     }
 
     /* Планшет */
@@ -47,7 +49,7 @@
 <body class="page__body">
 
   <header class="page__header page-header">
-    <nav class="page-header__main-nav main-nav">
+    <nav class="page-header__main-nav main-nav wrapper">
       <a class="main-nav__logo">
         <picture>
           <img src="img/logo/logo.svg" alt="Логотип «Drink2Go»" width="32" height="60">
@@ -91,12 +93,11 @@
     </nav>
     <section class="main-slider">
       <h2 class="visually-hidden">Промо слайдер</h2>
-      <div class="main-slider__wrapper">
-        <ul class="main-slider__slider-list">
-          <li class="main-slider__slider-item">
-            <div class="main-slider__slider-content main-slider__slider-content--flat-white wrapper">
+      <div class="main-slider__container swiper">
+        <ul class="main-slider__wrapper swiper-wrapper">
+          <li class="main-slider__item main-slider__item--flat-white swiper-slide">
+            <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
-              <span class="main-slider__badge badge">Новинка!</span>
               <picture class="main-slider__picture">
                 <source type="image/webp"
                   srcset="img/slider/mobile/flat_white_mobile.webp, img/slider/mobile/flat_white_mobile@2x.webp 2x">
@@ -105,6 +106,7 @@
                   srcset="img/slider/mobile/flat_white_mobile@2x.png 2x" width="280" height="280"
                   alt="Напиток Декаф Флэт Уайт">
               </picture>
+              <span class="main-slider__badge badge">Новинка!</span>
               <p class="main-slider__text">
                 Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для
                 расслабления
@@ -117,39 +119,56 @@
               </div>
             </div>
           </li>
-          <!-- <li>
-            <p class="main-slider__title">Лавандовый Латте</p>
-            <picture>
-              <source type="image/webp"
-                srcset="img/slider/mobile/flat_white_mobile.webp, img/slider/mobile/flat_white_mobile@2x.webp 2x">
+          <li class="main-slider__item main-slider__item--latte swiper-slide">
+            <div class="main-slider__slider-content">
+              <h3 class="main-slider__title title">Лавандовый Латте</h3>
+              <picture class="main-slider__picture">
+                <source type="image/webp"
+                  srcset="img/slider/mobile/lavender_mobile.webp, img/slider/mobile/lavender_mobile@2x.webp 2x">
 
-              <img src="img/slider/mobile/flat_white_mobile.png" srcset="img/slider/mobile/flat_white_mobile@2x.png 2x"
-                width="280" height="280" alt="Напиток Декаф Флэт Уайт">
-            </picture>
-            <p class="main-slider__text">
-              Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор
-            </p>
-            <span class="main-slider__old-price">285</span>
-            <span class="main-slider__price">265</span>
-            <button class="main-slider__button button">Заказать</button>
+                <img class="main-slider__image" src="img/slider/mobile/lavender_mobile.png"
+                  srcset="img/slider/mobile/lavender_mobile@2x.png 2x" width="280" height="280"
+                  alt="Новинка - Лавандовый Латте">
+              </picture>
+              <span class="main-slider__badge badge">Новинка!</span>
+              <p class="main-slider__text">
+                Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас
+                прямо на вершину Радужных гор
+              </p>
+              <div class="main-slider__footer">
+                <span class="main-slider__price price price--old-price">285<span>&#8381;</span></span>
+                <span class="main-slider__price price">265<span>&#8381;</span></span>
+                <a href="#" class="main-slider__button button">Заказать</a>
+              </div>
+            </div>
           </li>
-          <li>
-            <p class="main-slider__title">Тройной Эспрессо</p>
-            <picture>
-              <source type="image/webp"
-                srcset="img/slider/mobile/flat_white_mobile.webp, img/slider/mobile/flat_white_mobile@2x.webp 2x">
+          <li class="main-slider__item main-slider__item--espresso swiper-slide">
+            <div class="main-slider__slider-content">
+              <h3 class="main-slider__title title">Тройной Эспрессо</h3>
+              <picture class="main-slider__picture">
+                <source type="image/webp"
+                  srcset="img/slider/mobile/espresso_mobile.webp, img/slider/mobile/espresso_mobile@2x.webp 2x">
 
-              <img src="img/slider/mobile/flat_white_mobile.png" srcset="img/slider/mobile/flat_white_mobile@2x.png 2x"
-                width="280" height="280" alt="Напиток Декаф Флэт Уайт">
-            </picture>
-            <p class="main-slider__text">
-              Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость
-            </p>
-            <span class="main-slider__old-price">395</span>
-            <span class="main-slider__price">375</span>
-            <button class="main-slider__button button">Заказать</button>
-          </li> -->
+                <img class="main-slider__image" src="img/slider/mobile/espresso_mobile.png"
+                  srcset="img/slider/mobile/espresso_mobile@2x.png 2x" width="280" height="280"
+                  alt="Новинка - Тройной Эспрессо">
+              </picture>
+              <span class="main-slider__badge badge">Новинка!</span>
+              <p class="main-slider__text">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что
+                такое настоящая бодрость
+              </p>
+              <div class="main-slider__footer">
+                <span class="main-slider__price price price--old-price">395<span>&#8381;</span></span>
+                <span class="main-slider__price price">375<span>&#8381;</span></span>
+                <a href="#" class="main-slider__button button">Заказать</a>
+              </div>
+            </div>
+          </li>
         </ul>
+        <button class="main-slider__button-prev" type="button"></button>
+        <button class="main-slider__button-next" type="button"></button>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
   </header>
@@ -521,7 +540,9 @@
           <address class="footer-nav__address">
             <ul class="footer-nav__link-list link-list">
               <li class="link-list__item">
-                  <a class="link-list__link link-list__link--address" href="#">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+                <a class="link-list__link link-list__link--address" href="#">
+                  Санкт-Петербург, набережная реки Карповки, дом 5
+                </a>
               </li>
               <li class="link-list__item link-list__item--tel">
                 <a class="link-list__link link-list__link--tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
@@ -543,6 +564,9 @@
       </p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
 
   <script src="js/script.js"></script>
 </body>

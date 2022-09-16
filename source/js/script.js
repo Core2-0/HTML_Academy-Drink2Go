@@ -44,6 +44,27 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('main-nav__toggle-menu--closed');
 });
 
+const swiper = new Swiper('.main-slider__container', {
+  navigation: {
+    nextEl: '.main-slider__button-next',
+    prevEl: '.main-slider__button-prev',
+  },
+
+  breakpoints: {
+    // when window width is >= 480px
+    768: {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+
+        renderBullet: function (index, className) {
+          return `<span class="${className}"></span>`;
+        },
+      },
+    },
+  }
+});
+
 // const link = document.querySelector('.js-login');
 // const popup = document.querySelector('.modal');
 // const close = popup.querySelector('.modal__button--close');
