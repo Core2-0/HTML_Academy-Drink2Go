@@ -14,7 +14,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Pixel Glass -->
-  <!-- <style>
+  <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -35,14 +35,14 @@
     @media (min-width: 1300px) {
       HTML {
         /* Десктопный макет */
-        background-image: url("../img/pixel-glass/Desktop.png");
+        background-image: url("./img/desktop.png");
       }
     }
 
     BODY {
       opacity: .5;
     }
-  </style> -->
+  </style>
   <!-- Pixel Glass -->
 </head>
 
@@ -52,10 +52,12 @@
     <nav class="page-header__main-nav main-nav wrapper">
       <a class="main-nav__logo logo">
         <picture>
+          <source media="(min-width: 1380px)" srcset="img/logo/logo_long.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo_short.svg">
 
           <img class="main-nav__logo-image" src="img/logo/logo.svg" alt="Логотип «Drink2Go»" width="32" height="60">
         </picture>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
       </a>
       <button class="main-nav__toggle-menu main-nav__toggle-menu--closed main-nav__toggle-menu--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -76,7 +78,7 @@
       </ul>
       <ul class="main-nav__user-navigation-list user-navigation-list">
         <li class="user-navigation-list__item">
-          <a class="user-navigation-list__link" href="#">
+          <a class="user-navigation-list__link user-navigation-list__link--user" href="#">
             <svg class="user-navigation-list__icon" width="16" height="16" role="img" aria-label="user"
               focusable="false">
               <use xlink:href="img/sprite.svg#user"></use>
@@ -84,7 +86,7 @@
           </a>
         </li>
         <li class="user-navigation-list__item">
-          <a class="user-navigation-list__link" href="#">
+          <a class="user-navigation-list__link user-navigation-list__link--cart" href="#">
             <svg class="user-navigation-list__icon" width="16" height="16" role="img" aria-label="cart"
               focusable="false">
               <use xlink:href="img/sprite.svg#cart"></use>
@@ -102,10 +104,14 @@
               <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
               <picture class="main-slider__picture">
                 <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider/desktop/flat_white.webp, img/slider/desktop/flat_white@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/slider/tablet/flat_white.webp, img/slider/tablet/flat_white@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/slider/mobile/flat_white.webp, img/slider/mobile/flat_white@2x.webp 2x">
 
+                <source media="(min-width: 1380px)"
+                  srcset="img/slider/desktop/flat_white.jpg, img/slider/desktop/flat_white@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/flat_white@2x.jpg 2x">
                 <img class="main-slider__image" src="img/slider/mobile/flat_white.png"
@@ -239,8 +245,8 @@
               <legend class="filter__title title">Наличие молока</legend>
               <ul class="filter__input-list filter__input-list--radio">
                 <li class="filter__radio-item">
-                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter" value="no-matter"
-                    checked>
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter"
+                    value="no-matter" checked>
                   <label class="filter__label filter__radio-label" for="milk-no-matter">Неважно</label>
                 </li>
                 <li class="filter__radio-item">
@@ -252,7 +258,8 @@
                   <label class="filter__label filter__radio-label" for="milk-plant">Только растительное</label>
                 </li>
                 <li class="filter__radio-item">
-                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none" disabled>
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none"
+                    disabled>
                   <label class="filter__label filter__radio-label" for="milk-none">Без молока</label>
                 </li>
               </ul>
@@ -328,8 +335,7 @@
                   </picture>
                 </a>
                 <p class="product-card__description">
-                  Кофе без кофеина из Эфиопии
-                  с натуральным фермерским молоком
+                  Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком
                 </p>
                 <div class="product-card__buy">
                   <span class="product-card__price price">225<span>₽</span></span>

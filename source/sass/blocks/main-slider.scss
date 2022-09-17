@@ -4,7 +4,7 @@
 
 .main-slider__wrapper {
   @include list-reset;
-  max-width: $desktop-width;
+  max-width: 1440px;
 }
 
 .main-slider__item {
@@ -162,7 +162,7 @@
   right: 0;
   &::before {
     transform: rotate(45deg);
-    right: 3px;
+    right: 7px;
 
     @media (min-width: $tablet-width) {
       right: 37px;

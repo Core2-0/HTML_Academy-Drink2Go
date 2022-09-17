@@ -5,6 +5,7 @@
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
+    margin-right: calc(var(--content-padding-mobile) * -1);
   }
 }
 
@@ -22,13 +23,13 @@
   text-decoration: none;
   background-color: $base_white;
 
-  @media (min-width: $tablet-width) {
-    font-weight: 400;
-  }
-
   &--current {
     background-color: transparent;
     color: $base_black;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 20px;
+    }
 
     &:hover,
     &:focus,
@@ -47,7 +48,9 @@
 
       @media (min-width: $tablet-width) {
         border: none;
-        min-width: 150px;
+        min-width: 143px;
+        font-size: 14px;
+        font-weight: 400;
       }
     }
 
@@ -80,7 +83,7 @@
       transform: rotate(45deg);
 
       @media (min-width: $tablet-width) {
-        content: "Вперед";
+        content: "Вперёд";
         transform: none;
       }
     }

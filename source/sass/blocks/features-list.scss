@@ -9,6 +9,11 @@
     text-align: left;
     justify-content: center;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 318px);
+    text-align: center;
+  }
 }
 
 .features-list__item {
@@ -21,9 +26,15 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 0;
     margin-bottom: 0;
+    padding-top: 0;
     padding-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-top: 64px;
+    padding-left: 0;
   }
 
   &::before {
@@ -38,6 +49,10 @@
 
     @media (min-width: $tablet-width) {
       left: 28px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
     }
   }
 

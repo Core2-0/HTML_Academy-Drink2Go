@@ -8,6 +8,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 79px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 79px;
+  }
 }
 
 .catalog__title {
@@ -27,4 +31,11 @@
 
 .catalog__wrapper {
   order: 2;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    padding-left: var(--content-padding-desktop);
+    padding-right: var(--content-padding-desktop);
+  }
 }

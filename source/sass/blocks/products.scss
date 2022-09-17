@@ -13,7 +13,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 349px);
-    gap: 30px;
+    gap: 29px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 317px);
+    gap: 29px;
     margin-bottom: 70px;
   }
 }

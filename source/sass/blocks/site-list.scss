@@ -14,8 +14,12 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(4, max-content);
     order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 20px;
   }
 }
 

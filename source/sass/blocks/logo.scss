@@ -1,5 +1,18 @@
 .logo {
   height: 60px;
   margin-right: 5px;
-  margin-left: var(--content-padding-mobile);
+
+  @media (min-width: $desktop-width) {
+    height: 80px;
+  }
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
