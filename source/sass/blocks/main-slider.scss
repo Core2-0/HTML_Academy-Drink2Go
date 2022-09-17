@@ -213,8 +213,11 @@
   }
 }
 
-.swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets {
   bottom: 65px;
+}
+
+.swiper-pagination-bullet {
   width: 62px;
   height: 4px;
   background-color: $base_white;
