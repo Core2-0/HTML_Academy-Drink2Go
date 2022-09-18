@@ -14,7 +14,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Pixel Glass -->
-  <style>
+  <!-- <style>
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
@@ -42,7 +42,7 @@
     BODY {
       opacity: .5;
     }
-  </style>
+  </style> -->
   <!-- Pixel Glass -->
 </head>
 
@@ -220,7 +220,7 @@
       <span class="features__badge badge">Каталог</span>
       <div class="catalog__wrapper">
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
-          <div class="filter__wrapper wrapper">
+          <div class="filter__wrapper">
             <fieldset class="filter__fieldset">
               <legend class="filter__title title">Цена</legend>
               <div class="filter__range-filter range-filter">
@@ -243,7 +243,7 @@
             </fieldset>
             <fieldset class="filter__fieldset">
               <legend class="filter__title title">Наличие молока</legend>
-              <ul class="filter__input-list filter__input-list--radio">
+              <ul class="filter__input-list">
                 <li class="filter__radio-item">
                   <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter"
                     value="no-matter" checked>
@@ -264,9 +264,9 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__fieldset filter__fieldset--checkbox">
+            <fieldset class="filter__fieldset">
               <legend class="filter__title title">Страна произрастания</legend>
-              <ul class="filter__input-list filter__input-list--checkbox">
+              <ul class="filter__input-list">
                 <li class="filter__checkbox-item">
                   <input class="visually-hidden" type="checkbox" name="country" id="country-brazil" checked>
                   <label class="filter__label filter__checkbox-label" for="country-brazil">Бразилия</label>
@@ -301,7 +301,7 @@
             </ul>
           </div>
         </form>
-        <div class="catalog__products products wrapper">
+        <div class="catalog__products products">
           <div class="products__sort sort">
             <p class="sort__title">Сортировка: </p>
             <button class="sort__select" type="button">По умолчанию</button>
@@ -496,6 +496,7 @@
           <img class="footer-social__image" src="img/logo/logo_short.svg" alt="Логотип «Drink2Go»" width="82"
             height="36">
         </picture>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
       </a>
       <ul class="footer-social__list">
         <li class="footer-social__item">

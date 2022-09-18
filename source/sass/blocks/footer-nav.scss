@@ -10,6 +10,11 @@
     gap: 30px;
     padding-right: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 317px);
+    padding-top: 6px;
+  }
 }
 
 .footer-nav__item {
@@ -49,4 +54,8 @@
   line-height: inherit;
   font-style: normal;
   padding-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 290px;
+  }
 }
