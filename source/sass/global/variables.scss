@@ -7,7 +7,7 @@ $desktop-width: 1380px;
   --content-padding-desktop: 40px;
 
   --content-width-mobile: #{"calc(#{$mobile-width} - var(--content-padding-mobile) * 2)"};
-  --content-width-desktop: #{"calc(#{$mobile-width} - var(--content-padding-desktop) * 2)"};
+  --content-width-desktop: #{"calc(#{$desktop-width} - var(--content-padding-desktop) * 2)"};
 }
 
 // Font

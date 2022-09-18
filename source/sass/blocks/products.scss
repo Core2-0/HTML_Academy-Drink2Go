@@ -14,7 +14,14 @@
     display: grid;
     grid-template-columns: repeat(2, 349px);
     gap: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 317px);
+    gap: 29px;
+    margin-bottom: 60px;
   }
 }
 
@@ -35,5 +42,9 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 89px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 120px;
   }
 }

@@ -36,18 +36,16 @@
   @media (min-width: $tablet-width) {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
   }
 }
 
 .product-card__description {
   margin: 0 0 16px 0;
-  padding-right: 70px;
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 20px;
-    padding-right: 10px;
     margin-bottom: 20px;
   }
 }

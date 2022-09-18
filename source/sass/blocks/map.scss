@@ -23,4 +23,15 @@
       background-image: url(../img/map/map_bg_tablet@2x.webp);
     }
   }
+
+  @media (min-width: $desktop-width) {
+    height: 540px;
+    background-image: url(../img/map/map_bg_desktop.png);
+    background-image: url(../img/map/map_bg_desktop.webp);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(../img/map/map_bg_desktop@2x.png);
+      background-image: url(../img/map/map_bg_desktop@2x.webp);
+    }
+  }
 }

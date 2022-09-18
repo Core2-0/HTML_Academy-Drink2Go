@@ -19,4 +19,8 @@
     font-size: $font-size-base--tablet;
     line-height: $font-line-height-tablet;
   }
+
+  @media (min-width: $desktop-width) {
+    
+  }
 }

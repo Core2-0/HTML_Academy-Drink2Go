@@ -5,4 +5,9 @@
   max-width: $desktop-width;
   padding-left: var(--content-padding-mobile);
   padding-right: var(--content-padding-mobile);
+
+  @media (min-width: $desktop-width) {
+    padding-left: var(--content-padding-desktop);
+    padding-right: var(--content-padding-desktop);
+  }
 }

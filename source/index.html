@@ -35,7 +35,7 @@
     @media (min-width: 1300px) {
       HTML {
         /* Десктопный макет */
-        background-image: url("../img/pixel-glass/Desktop.png");
+        background-image: url("./img/desktop.png");
       }
     }
 
@@ -52,10 +52,12 @@
     <nav class="page-header__main-nav main-nav wrapper">
       <a class="main-nav__logo logo">
         <picture>
+          <source media="(min-width: 1380px)" srcset="img/logo/logo_long.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo_short.svg">
 
           <img class="main-nav__logo-image" src="img/logo/logo.svg" alt="Логотип «Drink2Go»" width="32" height="60">
         </picture>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
       </a>
       <button class="main-nav__toggle-menu main-nav__toggle-menu--closed main-nav__toggle-menu--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -76,7 +78,7 @@
       </ul>
       <ul class="main-nav__user-navigation-list user-navigation-list">
         <li class="user-navigation-list__item">
-          <a class="user-navigation-list__link" href="#">
+          <a class="user-navigation-list__link user-navigation-list__link--user" href="#">
             <svg class="user-navigation-list__icon" width="16" height="16" role="img" aria-label="user"
               focusable="false">
               <use xlink:href="img/sprite.svg#user"></use>
@@ -84,7 +86,7 @@
           </a>
         </li>
         <li class="user-navigation-list__item">
-          <a class="user-navigation-list__link" href="#">
+          <a class="user-navigation-list__link user-navigation-list__link--cart" href="#">
             <svg class="user-navigation-list__icon" width="16" height="16" role="img" aria-label="cart"
               focusable="false">
               <use xlink:href="img/sprite.svg#cart"></use>
@@ -102,10 +104,14 @@
               <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
               <picture class="main-slider__picture">
                 <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/slider/desktop/flat_white.webp, img/slider/desktop/flat_white@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
                   srcset="img/slider/tablet/flat_white.webp, img/slider/tablet/flat_white@2x.webp 2x">
                 <source type="image/webp"
                   srcset="img/slider/mobile/flat_white.webp, img/slider/mobile/flat_white@2x.webp 2x">
 
+                <source media="(min-width: 1380px)"
+                  srcset="img/slider/desktop/flat_white.jpg, img/slider/desktop/flat_white@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/flat_white@2x.jpg 2x">
                 <img class="main-slider__image" src="img/slider/mobile/flat_white.png"
@@ -214,7 +220,7 @@
       <span class="features__badge badge">Каталог</span>
       <div class="catalog__wrapper">
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
-          <div class="filter__wrapper wrapper">
+          <div class="filter__wrapper">
             <fieldset class="filter__fieldset">
               <legend class="filter__title title">Цена</legend>
               <div class="filter__range-filter range-filter">
@@ -237,10 +243,10 @@
             </fieldset>
             <fieldset class="filter__fieldset">
               <legend class="filter__title title">Наличие молока</legend>
-              <ul class="filter__input-list filter__input-list--radio">
+              <ul class="filter__input-list">
                 <li class="filter__radio-item">
-                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter" value="no-matter"
-                    checked>
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-no-matter"
+                    value="no-matter" checked>
                   <label class="filter__label filter__radio-label" for="milk-no-matter">Неважно</label>
                 </li>
                 <li class="filter__radio-item">
@@ -252,14 +258,15 @@
                   <label class="filter__label filter__radio-label" for="milk-plant">Только растительное</label>
                 </li>
                 <li class="filter__radio-item">
-                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none" disabled>
+                  <input class="visually-hidden" type="radio" name="availability-milk" id="milk-none" value="none"
+                    disabled>
                   <label class="filter__label filter__radio-label" for="milk-none">Без молока</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="filter__fieldset filter__fieldset--checkbox">
+            <fieldset class="filter__fieldset">
               <legend class="filter__title title">Страна произрастания</legend>
-              <ul class="filter__input-list filter__input-list--checkbox">
+              <ul class="filter__input-list">
                 <li class="filter__checkbox-item">
                   <input class="visually-hidden" type="checkbox" name="country" id="country-brazil" checked>
                   <label class="filter__label filter__checkbox-label" for="country-brazil">Бразилия</label>
@@ -294,7 +301,7 @@
             </ul>
           </div>
         </form>
-        <div class="catalog__products products wrapper">
+        <div class="catalog__products products">
           <div class="products__sort sort">
             <p class="sort__title">Сортировка: </p>
             <button class="sort__select" type="button">По умолчанию</button>
@@ -328,8 +335,7 @@
                   </picture>
                 </a>
                 <p class="product-card__description">
-                  Кофе без кофеина из Эфиопии
-                  с натуральным фермерским молоком
+                  Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком
                 </p>
                 <div class="product-card__buy">
                   <span class="product-card__price price">225<span>₽</span></span>
@@ -490,6 +496,7 @@
           <img class="footer-social__image" src="img/logo/logo_short.svg" alt="Логотип «Drink2Go»" width="82"
             height="36">
         </picture>
+        <span class="logo__text">Интернет-магазин кофейных напитков</span>
       </a>
       <ul class="footer-social__list">
         <li class="footer-social__item">

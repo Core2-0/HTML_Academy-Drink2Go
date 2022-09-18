@@ -12,6 +12,16 @@
   }
 }
 
+.user-navigation-list__item {
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
 .user-navigation-list__link {
   display: block;
   height: 60px;
@@ -20,13 +30,43 @@
   background-color: $base_white;
   color: $base_black;
 
-  &:active {
-    background-color: $base_secondary;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 32px 22px;
     height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    padding: 32px 22px;
+    height: 80px;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &--user {
+      &::after {
+        content: "Войти";
+      }
+    }
+
+    &--cart {
+      &::after {
+        content: "Корзина";
+      }
+    }
+
+    &--user,
+    &--cart {
+      &::after {
+        padding-left: 6px;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $base_secondary;
   }
 }
 
