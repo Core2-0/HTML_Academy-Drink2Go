@@ -11,16 +11,12 @@ buttonsLink.forEach((button) => {
   }
 })
 
-// Пагинация
-
-
-// Доделать закрывание с кнопки и по области
+// Сортировка
 const sort = document.querySelector('.sort');
 const sortSelectButton = sort.querySelector('.sort__select');
 const sortList = sort.querySelector('.sort__list');
 const sortLinks = sortList.querySelectorAll('.sort__link');
 
-// сортировка
 sortSelectButton.addEventListener('click', () => {
   sortList.classList.toggle('sort__list--open');
   sortSelectButton.classList.toggle('sort__select--open');
@@ -41,7 +37,7 @@ sortList.addEventListener('click', (evt) => {
 });
 
 
-// бургер
+// Бургер
 const mainSiteList = document.querySelector('.site-list');
 const navToggle = document.querySelector('.main-nav__toggle-menu');
 
@@ -59,7 +55,7 @@ navToggle.addEventListener('click', () => {
 });
 
 
-// слайдер
+// Слайдер
 const mainSlider = document.querySelector('.main-slider__wrapper');
 mainSlider.classList.remove('main-slider__wrapper--nojs');
 
@@ -111,14 +107,3 @@ const mainPinMarker = L.marker(
 );
 
 mainPinMarker.addTo(map);
-
-// window.addEventListener('keydown', function (evt) {
-//   if (evt.keyCode === 27) {
-//     evt.preventDefault();
-
-//     if (popup.classList.contains('modal--show')) {
-//       popup.classList.remove('modal--show');
-//       popup.classList.remove('modal--error');
-//     }
-//   }
-// });
