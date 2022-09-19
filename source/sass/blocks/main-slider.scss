@@ -1,10 +1,24 @@
 .main-slider__container {
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 .main-slider__wrapper {
   @include list-reset;
-  max-width: 1440px;
+  max-width: $mobile-width;
+
+  @media (min-width: $tablet-width) {
+    max-width: 750px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1420px;
+  }
+
+  &--nojs {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+  }
 }
 
 .main-slider__item {
@@ -23,7 +37,7 @@
   &--flat-white {
     background-color: $flat_white;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
       background-image: linear-gradient(180deg, $flat_white 0, $flat_white 77%, $base_white 77%);
     }
   }
@@ -31,7 +45,7 @@
   &--latte {
     background-color: $lavender_latte;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
       background-image: linear-gradient(180deg, $lavender_latte 0, $lavender_latte 77%, $base_white 77%);
     }
   }
@@ -39,7 +53,7 @@
   &--espresso {
     background-color: $espresso;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
       background-image: linear-gradient(180deg, $espresso 0, $espresso 77%, $base_white 77%);
     }
   }
@@ -91,7 +105,7 @@
   order: 0;
   margin-bottom: 4px;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
     order: 5;
   }
 
@@ -138,7 +152,7 @@
 .main-slider__footer {
   order: 4;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
     margin-bottom: 19px;
   }
 }
@@ -165,10 +179,11 @@
   &::before {
     content: "";
     position: absolute;
+
     @include arrow(12px, 12px);
     top: 49%;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    @media (min-width: $tablet-width) and (max-width: $only-tablet-width) {
       top: 37.5%;
     }
   }
@@ -191,6 +206,7 @@
 
 .main-slider__button-next {
   right: 0;
+
   &::before {
     transform: rotate(45deg);
     right: 7px;
@@ -203,6 +219,7 @@
 
 .main-slider__button-prev {
   left: 0;
+
   &::before {
     transform: rotate(-135deg);
     left: 7px;
@@ -215,6 +232,10 @@
 
 .swiper-horizontal > .swiper-pagination-bullets {
   bottom: 65px;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet {

@@ -42,3 +42,16 @@
     }
   }
 }
+
+.button--extra.button--disabled {
+  cursor: default;
+  color: $base_white;
+  background-color: $base_grey;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $base_white;
+    background-color: $base_grey;
+  }
+}

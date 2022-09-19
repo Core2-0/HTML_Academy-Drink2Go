@@ -5,45 +5,28 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-  <link rel="stylesheet" href="css/style.min.css">
 
   <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
 
-  <!-- Pixel Glass -->
-  <!-- <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию показывается мобильный макет */
-      background-image: url("./img/Group.png");
-      /* background-image: url("./img/Mobile_Opened.png"); */
-    }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.min.css">
 
-    /* Планшет */
-    @media (min-width: 768px) {
-      HTML {
-        /* Планшетный макет */
-        background-image: url("./img/tablet.png");
-      }
-    }
+  <meta name="description" content="Интернет-магазин кофейных напитков «Drink@Go»">
 
-    /* Десктоп */
-    @media (min-width: 1300px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("./img/desktop.png");
-      }
-    }
+  <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="js/script.min.js" as="script">
 
-    BODY {
-      opacity: .5;
-    }
-  </style> -->
-  <!-- Pixel Glass -->
 </head>
 
 <body class="page__body">
@@ -52,7 +35,7 @@
     <nav class="page-header__main-nav main-nav wrapper">
       <a class="main-nav__logo logo">
         <picture>
-          <source media="(min-width: 1380px)" srcset="img/logo/logo_long.svg">
+          <source media="(min-width: 1440px)" srcset="img/logo/logo_long.svg">
           <source media="(min-width: 768px)" srcset="img/logo/logo_short.svg">
 
           <img class="main-nav__logo-image" src="img/logo/logo.svg" alt="Логотип «Drink2Go»" width="32" height="60">
@@ -62,7 +45,7 @@
       <button class="main-nav__toggle-menu main-nav__toggle-menu--closed main-nav__toggle-menu--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__site-list site-list">
+      <ul class="main-nav__site-list site-list site-list--nojs">
         <li class="site-list__item">
           <a class="site-list__link site-list__link--active">Главная</a>
         </li>
@@ -98,22 +81,22 @@
     <section class="main-slider">
       <h2 class="visually-hidden">Промо слайдер</h2>
       <div class="main-slider__container swiper">
-        <ul class="main-slider__wrapper swiper-wrapper">
+        <ul class="main-slider__wrapper main-slider__wrapper--nojs swiper-wrapper">
           <li class="main-slider__item main-slider__item--flat-white swiper-slide">
             <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Декаф Флэт Уайт</h3>
               <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slider/desktop/flat_white.webp 1x, img/slider/desktop/flat_white@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/desktop/flat_white.webp, img/slider/desktop/flat_white@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/tablet/flat_white.webp, img/slider/tablet/flat_white@2x.webp 2x">
+                  srcset="img/slider/tablet/flat_white.webp 1x, img/slider/tablet/flat_white@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/slider/mobile/flat_white.webp, img/slider/mobile/flat_white@2x.webp 2x">
+                  srcset="img/slider/mobile/flat_white.webp 1x, img/slider/mobile/flat_white@2x.webp 2x">
 
-                <source media="(min-width: 1380px)"
-                  srcset="img/slider/desktop/flat_white.jpg, img/slider/desktop/flat_white@2x.jpg 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/slider/desktop/flat_white.png 1x, img/slider/desktop/flat_white@2x.png 2x">
                 <source media="(min-width: 768px)"
-                  srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/flat_white@2x.jpg 2x">
+                  srcset="img/slider/tablet/flat_white.png, img/slider/tablet/flat_white@2x.png 2x">
                 <img class="main-slider__image" src="img/slider/mobile/flat_white.png"
                   srcset="img/slider/mobile/flat_white@2x.png 2x" width="280" height="280"
                   alt="Напиток Декаф Флэт Уайт">
@@ -134,13 +117,15 @@
             <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Лавандовый Латте</h3>
               <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slider/desktop/lavender.webp 1x, img/slider/desktop/lavender@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/mobile/lavender.webp, img/slider/mobile/lavender@2x.webp 2x">
+                  srcset="img/slider/tablet/lavender.webp 1x, img/slider/tablet/lavender@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/slider/mobile/lavender.webp, img/slider/mobile/lavender@2x.webp 2x">
+                  srcset="img/slider/mobile/lavender.webp 1x, img/slider/mobile/lavender@2x.webp 2x">
 
                 <source media="(min-width: 768px)"
-                  srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/lavender@2x.jpg 2x">
+                  srcset="img/slider/tablet/flat_white.png 1x, img/slider/tablet/lavender@2x.png 2x">
                 <img class="main-slider__image" src="img/slider/mobile/lavender.png"
                   srcset="img/slider/mobile/lavender@2x.png 2x" width="280" height="280"
                   alt="Новинка - Лавандовый Латте">
@@ -161,13 +146,15 @@
             <div class="main-slider__slider-content">
               <h3 class="main-slider__title title">Тройной Эспрессо</h3>
               <picture class="main-slider__picture">
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="img/slider/desktop/espresso.webp 1x, img/slider/desktop/espresso@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/mobile/espresso.webp, img/slider/mobile/espresso@2x.webp 2x">
+                  srcset="img/slider/tablet/espresso.webp 1x, img/slider/tablet/espresso@2x.webp 2x">
                 <source type="image/webp"
-                  srcset="img/slider/mobile/espresso.webp, img/slider/mobile/espresso@2x.webp 2x">
+                  srcset="img/slider/mobile/espresso.webp 1x, img/slider/mobile/espresso@2x.webp 2x">
 
                 <source media="(min-width: 768px)"
-                  srcset="img/slider/tablet/flat_white.jpg, img/slider/tablet/espresso@2x.jpg 2x">
+                  srcset="img/slider/tablet/flat_white.png 1x, img/slider/tablet/espresso@2x.png 2x">
                 <img class="main-slider__image" src="img/slider/mobile/espresso.png"
                   srcset="img/slider/mobile/espresso@2x.png 2x" width="280" height="280"
                   alt="Новинка - Тройной Эспрессо">
@@ -217,7 +204,7 @@
     </section>
     <section class="catalog">
       <h2 class="catalog__title title">Каталог кофейных напитков</h2>
-      <span class="features__badge badge">Каталог</span>
+      <span class="catalog__badge badge">Каталог</span>
       <div class="catalog__wrapper">
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
           <div class="filter__wrapper">
@@ -268,23 +255,23 @@
               <legend class="filter__title title">Страна произрастания</legend>
               <ul class="filter__input-list">
                 <li class="filter__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="country" id="country-brazil" checked>
+                  <input class="visually-hidden" type="checkbox" name="brazil" id="country-brazil" checked>
                   <label class="filter__label filter__checkbox-label" for="country-brazil">Бразилия</label>
                 </li>
                 <li class="filter__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="country" id="country-ethiopia">
+                  <input class="visually-hidden" type="checkbox" name="ethiopia" id="country-ethiopia">
                   <label class="filter__label filter__checkbox-label" for="country-ethiopia">Эфиопия</label>
                 </li>
                 <li class="filter__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="country" id="country-columbia">
+                  <input class="visually-hidden" type="checkbox" name="columbia" id="country-columbia">
                   <label class="filter__label filter__checkbox-label" for="country-columbia">Колумбия</label>
                 </li>
                 <li class="filter__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="country" id="country-costa-rika">
+                  <input class="visually-hidden" type="checkbox" name="costa-rika" id="country-costa-rika">
                   <label class="filter__label filter__checkbox-label" for="country-costa-rika">Коста-Рика</label>
                 </li>
                 <li class="filter__checkbox-item">
-                  <input class="visually-hidden" type="checkbox" name="country" id="country-peru" disabled>
+                  <input class="visually-hidden" type="checkbox" name="peru" id="country-peru" disabled>
                   <label class="filter__label filter__checkbox-label" for="country-peru">Перу</label>
                 </li>
               </ul>
@@ -328,7 +315,7 @@
                 </a>
                 <a class="product-card__link product-card__link--picture" href="#">
                   <picture class="product-card__picture">
-                    <source type="image/webp" srcset="img/catalog/coffee-1.webp, img/catalog/coffee-1@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/coffee-1.webp 1x, img/catalog/coffee-1@2x.webp 2x">
                     <img class="product-card__image" src="img/catalog/coffee-1.png"
                       srcset="img/catalog/coffee-1@2x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт" width="130"
                       height="188">
@@ -350,7 +337,7 @@
                 </a>
                 <a class="product-card__link product-card__link--picture" href="#">
                   <picture class="product-card__picture">
-                    <source type="image/webp" srcset="img/catalog/coffee-2.webp, img/catalog/coffee-2@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/coffee-2.webp 1x, img/catalog/coffee-2@2x.webp 2x">
                     <img class="product-card__image" src="img/catalog/coffee-2.png"
                       srcset="img/catalog/coffee-2@2x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт" width="130"
                       height="188">
@@ -373,7 +360,7 @@
                 </a>
                 <a class="product-card__link product-card__link--picture" href="#">
                   <picture class="product-card__picture">
-                    <source type="image/webp" srcset="img/catalog/coffee-3.webp, img/catalog/coffee-3@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/coffee-3.webp 1x, img/catalog/coffee-3@2x.webp 2x">
                     <img class="product-card__image" src="img/catalog/coffee-3.png"
                       srcset="img/catalog/coffee-3@2x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт" width="130"
                       height="188">
@@ -396,7 +383,7 @@
                 </a>
                 <a class="product-card__link product-card__link--picture" href="#">
                   <picture class="product-card__picture">
-                    <source type="image/webp" srcset="img/catalog/coffee-4.webp, img/catalog/coffee-4@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/coffee-4.webp 1x, img/catalog/coffee-4@2x.webp 2x">
                     <img class="product-card__image" src="img/catalog/coffee-4.png"
                       srcset="img/catalog/coffee-4@2x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт" width="130"
                       height="188">
@@ -419,7 +406,7 @@
                 </a>
                 <a class="product-card__link product-card__link--picture" href="#">
                   <picture class="product-card__picture">
-                    <source type="image/webp" srcset="img/catalog/coffee-5.webp, img/catalog/coffee-5@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/coffee-5.webp 1x, img/catalog/coffee-5@2x.webp 2x">
                     <img class="product-card__image" src="img/catalog/coffee-5.png"
                       srcset="img/catalog/coffee-5@2x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт" width="130"
                       height="188">
@@ -442,7 +429,7 @@
                 </a>
                 <a class="product-card__link product-card__link--picture" href="#">
                   <picture class="product-card__picture">
-                    <source type="image/webp" srcset="img/catalog/coffee-6.webp, img/catalog/coffee-6@2x.webp 2x">
+                    <source type="image/webp" srcset="img/catalog/coffee-6.webp 1x, img/catalog/coffee-6@2x.webp 2x">
                     <img class="product-card__image" src="img/catalog/coffee-6.png"
                       srcset="img/catalog/coffee-1@6x.png 2x" alt="Кофе без кофенина Декаф Флэт Уайт" width="130"
                       height="188">
@@ -461,9 +448,8 @@
           </ul>
           <div class="products__pagination pagination">
             <ul class="pagination__list">
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--prev button button--extra" href="#"
-                  aria-label="Предыдущая страница"></a>
+              <li class="pagination__item pagination__item--prev">
+                <a class="pagination__link button button--extra" href="#" aria-label="Предыдущая страница"></a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link button button--extra" href="#">1</a>
@@ -474,16 +460,15 @@
               <li class="pagination__item">
                 <a class="pagination__link button button--extra" href="#">3</a>
               </li>
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--next button button--extra" href="#"
-                  aria-label="Следующая страница"></a>
+              <li class="pagination__item pagination__item--next">
+                <a class="pagination__link button button--extra" href="#" aria-label="Следующая страница"></a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
-    <section class="map">
+    <section class="map" id="map">
       <h2 class="visually-hidden">Карта с местонахождением интернет-магазина «Drink2Go»</h2>
     </section>
   </main>
@@ -500,7 +485,8 @@
       </a>
       <ul class="footer-social__list">
         <li class="footer-social__item">
-          <a class="footer-social__link" href="https://vk.com/" target="_blank">
+          <a class="footer-social__link" href="https://vk.com/htmlacademy" target="_blank">
+            <span class="visually-hidden">Перейти в Вконтакте</span>
             <svg class="footer-social__icon footer-social__icon--vk" width="20" height="20" role="img" aria-label="Vk"
               focusable="false">
               <use xlink:href="img/sprite.svg#vk"></use>
@@ -508,7 +494,8 @@
           </a>
         </li>
         <li class="footer-social__item">
-          <a class="footer-social__link" href="https://ru.pinterest.com/" target="_blank">
+          <a class="footer-social__link" href="https://pin.it/345KAJF" target="_blank">
+            <span class="visually-hidden">Перейти на Pinterest</span>
             <svg class="footer-social__icon footer-social__icon--pinterest" width="22" height="22" role="img"
               aria-label="Pinterest" focusable="false">
               <use xlink:href="img/sprite.svg#pinterest"></use>
@@ -516,7 +503,8 @@
           </a>
         </li>
         <li class="footer-social__item">
-          <a class="footer-social__link" href="https://ok.ru/" target="_blank">
+          <a class="footer-social__link" href="https://m.ok.ru/group/55557024251912" target="_blank">
+            <span class="visually-hidden">Перейти в Одноклассники</span>
             <svg class="footer-social__icon footer-social__icon--ok" width="20" height="20" role="img" aria-label="Ok"
               focusable="false">
               <use xlink:href="img/sprite.svg#ok"></use>
@@ -563,7 +551,8 @@
           <address class="footer-nav__address">
             <ul class="footer-nav__link-list link-list">
               <li class="link-list__item">
-                <a class="link-list__link link-list__link--address" href="#">
+                <a class="link-list__link link-list__link--address" href="https://yandex.ru/maps/-/CCUNuSDFDB"
+                  target="_blank">
                   Санкт-Петербург, набережная реки Карповки, дом 5
                 </a>
               </li>
@@ -580,7 +569,8 @@
         Разработано в
         <a class="developers__link" href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <svg class="developers__icon" width="12" height="16" role="img" aria-label="HTML Academy" focusable="false">
+          <svg class="developers__icon" width="12" height="16" role="img" aria-label="Логотип HTML Academy"
+            focusable="false">
             <use xlink:href="img/sprite.svg#academy_logo"></use>
           </svg>
         </a>
@@ -589,9 +579,9 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

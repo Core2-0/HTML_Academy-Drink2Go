@@ -57,13 +57,13 @@
 
   &--address {
     &::before {
-      background-image: url(../img/icons/button-icons/address.svg);
+      background-image: url("../img/icons/button-icons/address.svg");
     }
   }
 
   &--tel {
     &::before {
-      background-image: url(../img/icons/button-icons/tel.svg);
+      background-image: url("../img/icons/button-icons/tel.svg");
     }
   }
 }

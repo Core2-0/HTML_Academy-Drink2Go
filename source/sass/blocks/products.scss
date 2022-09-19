@@ -12,14 +12,14 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 349px);
+    grid-template-columns: repeat(2, minmax(min-content, 349px));
     gap: 30px;
-    margin-bottom: 72px;
+    margin-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 317px);
+    grid-template-columns: repeat(3, minmax(min-content, 317px));
     gap: 29px;
     margin-bottom: 60px;
   }
@@ -34,17 +34,5 @@
 
   &:last-child {
     margin-bottom: 0;
-  }
-}
-
-.products__pagination {
-  margin-bottom: 45px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 89px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 120px;
   }
 }

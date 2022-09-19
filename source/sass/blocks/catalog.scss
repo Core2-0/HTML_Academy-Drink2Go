@@ -45,3 +45,15 @@
     padding: 0;
   }
 }
+
+.catalog__products {
+  padding-bottom: 45px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 120px;
+  }
+}

@@ -1,21 +1,37 @@
 .site-list {
   min-width: 100%;
+
   @include list-reset;
   text-align: center;
   text-transform: uppercase;
   background-color: $base_white;
   order: 3;
   z-index: 100;
+  transition: all 0.2s ease-out;
 
-  &--closed {
-    display: none;
-    min-width: 0;
+  @media (max-width: $only-mobile-width) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+
+    &--closed {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &--nojs {
+      position: static;
+    }
   }
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(4, max-content);
     order: 1;
+    min-width: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,8 +40,6 @@
 }
 
 .site-list__item {
-  margin-left: calc(var(--content-padding-mobile) * -1);
-  margin-right: calc(var(--content-padding-mobile) * -1);
   border-top: 1px solid $base_secondary;
 
   &:last-child {
