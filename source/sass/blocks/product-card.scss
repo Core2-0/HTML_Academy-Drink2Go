@@ -3,9 +3,17 @@
   flex-direction: column;
   background-color: $base_white;
   padding: 40px 20px 20px;
+  border-radius: 4px;
 
   @media (min-width: $tablet-width) {
     padding: 50px 29px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:focus-within,
+    &:hover {
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 }
 
@@ -67,7 +75,7 @@
       vertical-align: middle;
       width: 20px;
       height: 16px;
-      background-image: url(../img/icons/button-icons/cart_add.svg);
+      background-image: url("../img/icons/button-icons/cart_add.svg");
       background-position: center;
       background-repeat: no-repeat;
       margin-right: 6px;

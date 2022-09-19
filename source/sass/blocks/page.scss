@@ -3,6 +3,7 @@
 }
 
 .page__body {
+  width: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -19,8 +20,8 @@
     font-size: $font-size-base--tablet;
     line-height: $font-line-height-tablet;
   }
+}
 
-  @media (min-width: $desktop-width) {
-    
-  }
+img {
+  max-width: 100%;
 }

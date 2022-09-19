@@ -58,25 +58,25 @@
 
   &--speed {
     &::before {
-      background-image: url(../img/icons/features_icons/speed_icon.svg);
+      background-image: url("../img/icons/features_icons/speed_icon.svg");
     }
   }
 
   &--comfort {
     &::before {
-      background-image: url(../img/icons/features_icons/comfort_icon.svg);
+      background-image: url("../img/icons/features_icons/comfort_icon.svg");
     }
   }
 
   &--energy {
     &::before {
-      background-image: url(../img/icons/features_icons/energy_icon.svg);
+      background-image: url("../img/icons/features_icons/energy_icon.svg");
     }
   }
 
   &--eco {
     &::before {
-      background-image: url(../img/icons/features_icons/eco_icon.svg);
+      background-image: url("../img/icons/features_icons/eco_icon.svg");
     }
   }
 }

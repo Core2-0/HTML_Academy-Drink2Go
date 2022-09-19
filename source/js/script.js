@@ -1,19 +1,31 @@
 'use strict'
 
+// Отключение перехода по неактивным ссылкам
+const buttonsLink = document.querySelectorAll('a');
+
+buttonsLink.forEach((button) => {
+  if (button.classList.contains('button--disabled')) {
+    button.addEventListener('click', (evt) => {
+      evt.preventDefault();
+    });
+  }
+})
+
+// Пагинация
+
+
 // Доделать закрывание с кнопки и по области
 const sort = document.querySelector('.sort');
 const sortSelectButton = sort.querySelector('.sort__select');
 const sortList = sort.querySelector('.sort__list');
 const sortLinks = sortList.querySelectorAll('.sort__link');
 
-
-/* Открываем.закрываем список сортровки */
+// сортировка
 sortSelectButton.addEventListener('click', () => {
   sortList.classList.toggle('sort__list--open');
   sortSelectButton.classList.toggle('sort__select--open');
 });
 
-/* Меняем выбранный вид сортировки */
 sortList.addEventListener('click', (evt) => {
   evt.preventDefault();
   const sortSelectType = evt.target;
@@ -28,10 +40,12 @@ sortList.addEventListener('click', (evt) => {
   sortSelectButton.textContent = sortSelectType.textContent;
 });
 
+
+// бургер
 const mainSiteList = document.querySelector('.site-list');
 const navToggle = document.querySelector('.main-nav__toggle-menu');
 
-mainSiteList.classList.remove('main-nav__site-list--nojs');
+mainSiteList.classList.remove('site-list--nojs');
 navToggle.classList.remove('main-nav__toggle-menu--nojs');
 
 if (!mainSiteList.classList.contains('site-list--closed')) {
@@ -43,6 +57,11 @@ navToggle.addEventListener('click', () => {
   navToggle.classList.toggle('main-nav__toggle-menu--opened');
   navToggle.classList.toggle('main-nav__toggle-menu--closed');
 });
+
+
+// слайдер
+const mainSlider = document.querySelector('.main-slider__wrapper');
+mainSlider.classList.remove('main-slider__wrapper--nojs');
 
 const swiper = new Swiper('.main-slider__container', {
   navigation: {
@@ -64,52 +83,38 @@ const swiper = new Swiper('.main-slider__container', {
   }
 });
 
-// const link = document.querySelector('.js-login');
-// const popup = document.querySelector('.modal');
-// const close = popup.querySelector('.modal__button--close');
-// const form = popup.querySelector('form');
-// const login = popup.querySelector('[name=login]');
-// const password = popup.querySelector('[name=password]');
+// Карта
+const map = L.map('map');
 
-// let isStorageSupport = true;
-// let storage = '';
+map.setView({
+  lat: 59.968322,
+  lng: 30.317359,
+}, 17);
 
-// try {
-//   storage = localStorage.getItem('login');
-// } catch (err) {
-//   isStorageSupport = false;
-// }
+L.tileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+).addTo(map);
 
-// link.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   popup.classList.add('modal--show');
+const mainPinIcon = L.icon({
+  iconUrl: 'img/map/map_pin.svg',
+  iconSize: [38, 50],
+  iconAnchor: [0, 50],
+});
 
-//   if (storage) {
-//     login.value = storage;
-//     password.focus();
-//   } else {
-//     login.focus();
-//   }
-// });
+const mainPinMarker = L.marker(
+  {
+    lat: 59.968322,
+    lng: 30.317359,
+  },
+  {
+    icon: mainPinIcon,
+  }
+);
 
-// close.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   popup.classList.remove('modal--show');
-//   popup.classList.remove('modal--error');
-// });
-
-// form.addEventListener('submit', function (evt) {
-//   if (!login.value || !password.value) {
-//     evt.preventDefault();
-//     popup.classList.remove('modal--error');
-//     popup.offsetWidth = popup.offsetWidth;
-//     popup.classList.add('modal--error');
-//   } else {
-//     if (isStorageSupport) {
-//       localStorage.setItem('login', login.value);
-//     }
-//   }
-// });
+mainPinMarker.addTo(map);
 
 // window.addEventListener('keydown', function (evt) {
 //   if (evt.keyCode === 27) {

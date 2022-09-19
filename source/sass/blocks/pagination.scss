@@ -1,11 +1,87 @@
 .pagination__list {
   @include list-reset;
+
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, max-content);
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
-    margin-right: calc(var(--content-padding-mobile) * -1);
+    padding-right: 125px;
+  }
+}
+
+.pagination__item {
+  @media (min-width: $tablet-width) {
+    &--prev,
+    &--next {
+      position: absolute;
+    }
+
+    &--prev {
+      left: -145px;
+    }
+
+    &--next {
+      right: -20px;
+    }
+  }
+}
+
+.pagination__item--next .pagination__link,
+.pagination__item--prev .pagination__link {
+  &::before {
+    content: "";
+
+    @include arrow;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      min-width: 143px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      border-top-color: inherit;
+      border-right-color: inherit;
+
+      @media (min-width: $tablet-width) {
+        border: none;
+      }
+    }
+  }
+}
+
+.pagination__item--next .pagination__link {
+  &::before {
+    transform: rotate(45deg);
+
+    @media (min-width: $tablet-width) {
+      content: "Вперёд";
+      transform: none;
+    }
+  }
+}
+
+.pagination__item--prev .pagination__link {
+  &::before {
+    transform: rotate(-135deg);
+
+    @media (min-width: $tablet-width) {
+      content: "Назад";
+      transform: none;
+    }
+  }
+}
+
+.pagination__link.button--disabled {
+  &::before {
+    border-top-color: $base_white;
+    border-right-color: $base_white;
   }
 }
 
@@ -13,7 +89,7 @@
   display: inline-flex;
   min-width: 40px;
   height: 40px;
-  padding: 0px;
+  padding: 0;
   align-items: center;
   justify-content: center;
   color: $base_primary;
@@ -37,55 +113,6 @@
       background-color: transparent;
       color: $base_black;
       cursor: default;
-    }
-  }
-
-  &--prev,
-  &--next {
-    &::before {
-      content: "";
-      @include arrow;
-
-      @media (min-width: $tablet-width) {
-        border: none;
-        min-width: 143px;
-        font-size: 14px;
-        font-weight: 400;
-      }
-    }
-
-    &:hover,
-    &:focus {
-      &::before {
-        border-top: 2px solid $base_white;
-        border-right: 2px solid $base_white;
-
-        @media (min-width: $tablet-width) {
-          border: none;
-        }
-      }
-    }
-  }
-
-  &--prev {
-    &::before {
-      transform: rotate(-135deg);
-
-      @media (min-width: $tablet-width) {
-        content: "Назад";
-        transform: none;
-      }
-    }
-  }
-
-  &--next {
-    &::before {
-      transform: rotate(45deg);
-
-      @media (min-width: $tablet-width) {
-        content: "Вперёд";
-        transform: none;
-      }
     }
   }
 }

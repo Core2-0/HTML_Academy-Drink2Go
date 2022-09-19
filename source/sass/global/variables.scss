@@ -1,6 +1,8 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1380px;
+$desktop-width: 1440px;
+$only-mobile-width: 767px;
+$only-tablet-width: 1339px;
 
 :root {
   --content-padding-mobile: 20px;
@@ -19,21 +21,21 @@ $font-line-height-tablet: 24px;
 
 // Colors
 // Base Colors
-$base_white: #FFFFFF;
-$base_grey: #BDBDBD;
+$base_white: #ffffff;
+$base_grey: #bdbdbd;
 $base_black: #333333;
-$base_primary: #7859CF;
-$base_secondary: #F0EBFF;
+$base_primary: #7859cf;
+$base_secondary: #f0ebff;
 
 // Alt Colors
 $black__opacity_20: rgba(0, 0, 0, 0.2);
 $primary_opacity_25: rgba(120, 89, 207, 0.25);
-$primary_lighter: #9070EC;
-$primary_darker: #593CAC;
-$light_grey: #E2E2E2;
+$primary_lighter: #9070ec;
+$primary_darker: #593cac;
+$light_grey: #e2e2e2;
 
 // Background Colors
-$lightest_grey: #F8F8F8;
-$flat_white: #F3EBE1;
-$lavender_latte: #EAE6FC;
-$espresso: #E5E6E8;
+$lightest_grey: #f8f8f8;
+$flat_white: #f3ebe1;
+$lavender_latte: #eae6fc;
+$espresso: #e5e6e8;
