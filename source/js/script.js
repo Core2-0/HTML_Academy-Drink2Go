@@ -69,16 +69,12 @@ const swiper = new Swiper('.main-slider__container', {
     prevEl: '.main-slider__button-prev',
   },
 
-  breakpoints: {
-    1380: {
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
 
-        renderBullet: function (index, className) {
-          return `<span class="${className}"></span>`;
-        },
-      },
+    renderBullet: function (index, className) {
+      return `<span class="${className}"></span>`;
     },
   }
 });
