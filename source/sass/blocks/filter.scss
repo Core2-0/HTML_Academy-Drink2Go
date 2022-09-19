@@ -12,14 +12,15 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 220px 1fr 1fr;
-    gap: 29px;
-    margin-bottom: 10px;
+    grid-template-columns: 225px 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 7px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 318px;
     margin-bottom: 20px;
+    gap: 29px;
   }
 }
 
